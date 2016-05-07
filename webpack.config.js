@@ -12,14 +12,19 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel',
                 query: {
-                    presets: ['es2015', 'react']
+                  plugins: ['transform-decorators-legacy'],
+                  presets: ['react', 'es2015', 'stage-1', 'stage-0']
                 }
             },
             {
                 test: /\.sass$/,
                 // Passing indentedSyntax query param to node-sass
                 loaders: ["style", "css", "sass?indentedSyntax"]
-            }
+            },
+            {
+                test: /\.(png)$/,
+                loader: 'url-loader?limit=10000&mimetype=image/png'
+            }            
         ]
     }
 };
