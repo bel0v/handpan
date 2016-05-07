@@ -1,0 +1,39 @@
+#mainPan
+  width: 400px
+
+.cls-1,.cls-3,.cls-4 
+  fill: transparent
+  stroke-miterlimit: 10
+
+.cls-1,.cls-3 
+  stroke: $color-blue
+
+.cls-1 
+  stroke-width: 2px
+
+.cls-2 
+  fill: $color-blue
+
+.cls-3,.cls-4 
+  stroke-width: 5px
+
+.cls-4 
+  stroke: $color-blue-light
+
+.cls-5 
+  font-size: 41.66px
+  fill: $color-blue-light
+  font-family: Neucha
+
+
+$group: group !default
+
+@for $i from 1 through 9
+  .#{$group}-#{$i}:hover
+    cursor: pointer
+    
+    .#{$group}-#{$i}-inner
+      circle, text
+        stroke: $color-light
+      circle
+        stroke-width: 6px
