@@ -1,0 +1,63 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 827.5 827.5">
+  <defs>
+    <style>
+      .cls-1,.cls-3,.cls-4{fill:none;stroke-miterlimit:10;}
+      .cls-1,.cls-3{stroke:#667893;}
+      .cls-1{stroke-width:2px;}
+      .cls-2{fill:#667893;}
+      .cls-3,.cls-4{stroke-width:5px;}
+      .cls-4{stroke:#b2c7e7;}
+      .cls-5{font-size:41.66px;fill:#b2c7e7;font-family:Neucha;}
+    </style>
+  </defs>
+  <title>
+    pan
+  </title>
+  <circle class="cls-1" cx="413.75" cy="413.75" r="396.25"/>
+  <path class="cls-2" d="M413.75 292.52a121.23 121.23 0 1 1-85.72 35.51 120.44 120.44 0 0 1 85.72-35.51m0-2a123.23 123.23 0 1 0 123.23 123.23 123.23 123.23 0 0 0-123.23-123.23z"/>
+  <circle class="cls-3" cx="413.75" cy="413.75" r="411.25"/>
+  <circle class="cls-4" cx="500" cy="500" r="41.81" transform="rotate(-89.88 413.642 500.087)"/>
+  <text class="cls-5" transform="translate(403.54 429.22)">
+    1
+  </text>
+  <text class="cls-5" transform="translate(512.77 686.67)">
+    2
+  </text>
+  <text class="cls-5" transform="translate(660.73 533.82)">
+    4
+  </text>
+  <text class="cls-5" transform="translate(146.37 533.82)">
+    5
+  </text>
+  <text class="cls-5" transform="translate(660.73 321.44)">
+    6
+  </text>
+  <text class="cls-5" transform="translate(148.48 321.44)">
+    7
+  </text>
+  <text class="cls-5" transform="translate(299.24 686.67)">
+    3
+  </text>
+  <text class="cls-5" transform="translate(509.75 169.34)">
+    8
+  </text>
+  <text class="cls-5" transform="translate(298.49 169.34)">
+    9
+  </text>
+  <circle class="cls-1" cx="393.91" cy="758.7" r="70.08" transform="rotate(-42.99 241.31 825.124)"/>
+  <circle class="cls-4" cx="393.91" cy="758.7" r="41.81" transform="rotate(-42.99 241.31 825.124)"/>
+  <circle class="cls-1" cx="607.27" cy="758.7" r="70.08" transform="rotate(-47.01 464.945 814.716)"/>
+  <circle class="cls-4" cx="607.27" cy="758.7" r="41.81" transform="rotate(-47.01 464.945 814.716)"/>
+  <circle class="cls-1" cx="758.02" cy="606.68" r="70.08" transform="rotate(-3.28 -790.72 2070.324)"/>
+  <circle class="cls-4" cx="758.02" cy="606.68" r="41.81" transform="rotate(-3.28 -790.72 2070.324)"/>
+  <circle class="cls-1" cx="242.76" cy="606.68" r="70.08" transform="rotate(-86.72 153.95 609.22)"/>
+  <circle class="cls-4" cx="242.76" cy="606.68" r="41.81" transform="rotate(-86.72 153.95 609.22)"/>
+  <circle class="cls-1" cx="606.87" cy="240.31" r="70.08" transform="rotate(-42.99 454.272 306.692)"/>
+  <circle class="cls-4" cx="606.87" cy="240.31" r="41.81" transform="rotate(-42.99 454.272 306.692)"/>
+  <circle class="cls-1" cx="393.51" cy="240.31" r="70.08" transform="rotate(-47.01 251.2 296.34)"/>
+  <circle class="cls-4" cx="393.51" cy="240.31" r="41.81" transform="rotate(-47.01 251.2 296.34)"/>
+  <circle class="cls-1" cx="242.76" cy="392.33" r="70.08" transform="rotate(-3.28 -1306.464 1855.786)"/>
+  <circle class="cls-4" cx="242.76" cy="392.33" r="41.81" transform="rotate(-3.28 -1306.464 1855.786)"/>
+  <circle class="cls-1" cx="758.02" cy="392.33" r="70.08" transform="rotate(-86.72 669.196 394.884)"/>
+  <circle class="cls-4" cx="758.02" cy="392.33" r="41.81" transform="rotate(-86.72 669.196 394.884)"/>
+</svg>
