@@ -13,6 +13,7 @@ module.exports = {
             "window.jQuery": "jquery"
         })
     ],
+    devtool: 'source-map',
     module: {
         loaders: [
             { test: /\.css$/, loader: "style!css" },

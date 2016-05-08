@@ -4,39 +4,36 @@ import Dropdown from 'bootstrap/js/dropdown.js'
 
 
 const PresetPalette = (props) => {
-  const {preset, db} = props;
+  const {preset, currentSounds, allSounds} = props;
+  console.log('allSounds', allSounds);
   return (
-    <div className='palette-header'>
-      <div className='palette-header-left'>
-        <span className='note-icon'/>
-        Пре-set
-      </div>
-      <div className='palette-header-middle'>
-        <span className='arrow-icon left'/>
-        <div className="preset-dropdown-wrapper">
-          <button id="presetDropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {preset.name}
-            <span className="caret"></span>
-          </button>
-          <ul className="dropdown-menu" aria-labelledby="presetDropdown">
-            {db.presets.map(function(preset) {
-              return <li 
-                data-id={preset.id}
-                onClick={(event) => props.choosePresetOption(preset.id)}>
-                  {preset.name}
-                </li>;
-            })}
-          </ul>
-        </div>
-        <span className='arrow-icon right'/>
-      </div>
-      <div className='palette-header-right'>
-        <svg className='palette-note' viewBox="0 0 88.62 88.62">
-          <Note number={+preset.id.substring(1)} outerCircle={false} />
-        </svg>
-        <span className='palette-ding'>{preset.ding}</span>
-        <span className='palette-hint'>{"("+ preset.hint +")"}</span>
-      </div>
+    <div className='palette-body'>
+      {currentSounds.map(function(sound, index) {
+        return (
+          <div key={'s'+ (index+1)} className = 'palette-sound'>
+            <svg className='palette-note' viewBox="0 0 88.62 88.62">
+              <Note number={index + 1} outerCircle={false} />
+            </svg>
+            <div className="note-dropdown-wrapper">
+              <button className='note-dropdown' id={"noteDropdown-"+ index+1} type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {sound.name +' ('+ sound.hint +')'}
+                <span className="caret"></span>
+              </button>
+              <div className={"dropdown-menu note-dropdown" + (index + 1 < 5 ? ' upper' : '')} aria-labelledby={"noteDropdown-"+ index+1}>
+                {allSounds.map(function(gSound, index) {
+                  return <div
+                    className='dropdown-menu_note-item' 
+                    key={'gs-'+index}
+                    onClick={(event) => props.chooseNote(gSound)}>
+                      {gSound.name +' ('+ gSound.hint +')'}
+                    </div>;
+                })}
+              </div>
+
+            </div>
+          </div>
+        )
+      })}
     </div>
   )
 }
@@ -48,3 +45,4 @@ PresetPalette.defaultProps = {
 
 
 export default PresetPalette;
+
