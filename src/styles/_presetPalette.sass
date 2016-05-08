@@ -1,0 +1,96 @@
+.palette-header
+  position: relative
+  width: 100%
+  padding-bottom: 50px
+  &-left, &-right, &-middle
+    position: absolute
+    color: $color-light
+  &-left
+    right: 0
+    margin-right: calc(50% + 70px)
+    margin-top: 10px
+  &-right
+    left: 0
+    margin-left: calc(50% + 70px)
+  &-middle
+    left: 0
+    right: 0
+    margin: auto
+    padding-top: 2px
+
+.palette-note
+  width: 42px
+  vertical-align: middle
+
+.note-icon
+  width: 22px
+  height: 22px
+  display: inline-block
+  background: url('../img/note_icon.svg')
+  vertical-align: middle
+  background-repeat: no-repeat
+  margin-right: 5px
+
+.arrow-svg
+  fill:#79a4d2
+  &:hover
+    fill: $color-light
+
+.arrow-icon
+  width: 10px
+  height: 19px
+  background: url('../img/arrow.svg')
+  display: inline-block
+  vertical-align: middle
+  background-repeat: no-repeat
+  &.left
+    transform: scaleX(-1)
+    margin-right: 5px
+  &.right
+    margin-left: 5px
+  &:hover
+    -webkit-filter: brightness(180%)
+    filter: brightness(180%)
+
+.preset-dropdown-wrapper
+  position: relative
+  display: inline-block
+  vertical-align: middle
+
+ul.dropdown-menu
+  transform: translateX(-50%)
+  left: 50%
+  color: $color-font-darkblue
+  &[aria-labelledby='presetDropdown']
+    margin-top: 0
+    min-width: 73px
+  li
+    height: 34px
+    line-height: 34px
+    font-size: 16px
+    padding-left: 15px
+    &:hover
+      background: $color-brown
+      color: $color-light
+
+#presetDropdown
+  text-align: left
+  padding-left: 15px
+  width: 73px
+  height: 38px
+  cursor: inherit
+  background: transparent
+  color: $color-light
+  border: 1px #c8cbbd solid
+  border-radius: 2px
+  .caret
+    position: absolute
+    top: 50%
+    right: 15px
+    transform: translateY(-50%)
+  &:hover, &:active, &:focus
+    border-color: $color-brown
+    .caret
+      color: $color-brown
+  &:active, &:focus
+    outline: none

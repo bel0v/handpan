@@ -1,15 +1,9 @@
-//   var newCurrentPreset = jsObjects.filter(function( obj ) {
-//   return obj.b == 6;
-// });
-
-
+import * as helpers from './dbhelpers.js'
 /*Action Creators*/
 
 const chooseCurrentPreset = (db, presetId) => {
   return (dispatch) => {
-    let newCurrentPreset = db.presets.filter(function( preset ) {
-      return preset.id === presetId;
-    })[0];
+    let newCurrentPreset = helpers.getPresetById(db, presetId);
     dispatch(updatePreset(newCurrentPreset));
   }
 }

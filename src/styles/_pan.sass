@@ -1,7 +1,7 @@
-#mainPan
+.mainPan
   width: 400px
 
-.cls-1,.cls-3,.cls-4 
+.cls-1,.cls-2,.cls-3,.cls-4 
   fill: transparent
   stroke-miterlimit: 10
 
@@ -12,8 +12,11 @@
   stroke-width: 2px
 
 .cls-2 
-  fill: $color-blue
-
+  stroke: $color-blue
+  &.fake
+    stroke: transparent
+    stroke-width: 160px
+    
 .cls-3,.cls-4 
   stroke-width: 5px
 
@@ -28,12 +31,14 @@
 
 $group: group !default
 
-@for $i from 1 through 9
-  .#{$group}-#{$i}:hover
-    // cursor: pointer
-    
-    .#{$group}-#{$i}-inner
-      circle, text
-        stroke: $color-light
-      circle
-        stroke-width: 6px
+.mainPan 
+  > g:hover > g, .cls-2:hover + g
+    circle, text
+      stroke: $color-light
+    circle
+      stroke-width: 6px
+.palette-note:hover
+  circle, text
+    stroke: $color-light
+  circle
+    stroke-width: 6px

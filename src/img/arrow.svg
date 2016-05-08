@@ -1,0 +1,11 @@
+<svg id="arrow" data-name="Isolation Mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.2 19.3">
+  <defs>
+    <style>
+      .arrow-svg{fill:#79a4d2;}
+    </style>
+  </defs>
+  <title>
+    arrow
+  </title>
+  <path class="arrow-svg" d="M.95.16a.56.56 0 1 0-.79.79l8.69 8.7-8.69 8.71a.55.55 0 0 0 0 .79.56.56 0 0 0 .78 0L10 10a.56.56 0 0 0 0-.79z"/>
+</svg>

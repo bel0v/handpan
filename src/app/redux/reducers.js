@@ -1,5 +1,5 @@
 
-const initialState = {
+export const initialState = {
   currentPreset: {},
   db: {
     presets: [
@@ -16,16 +16,44 @@ const initialState = {
       {id: 'p11', name: '№11', sounds:['G3','C4','D4','Eb4','F4','G4','Ab4','B4','C5','D5']},
     ],
     sounds: [
-      {name: 'A3'}, {name: 'A4'}, {name: 'Ab4'},{name: 'B3'},
-      {name: 'B4'}, {name: 'Bb3'},{name: 'C#3'},{name: 'C#4'},
-      {name: 'C#5'},{name: 'C4'}, {name: 'C5'}, {name: 'D#4'},
-      {name: 'D3'}, {name: 'D4'}, {name: 'D5'}, {name: 'Db4'},
-      {name: 'E3'}, {name: 'E4'}, {name: 'Eb4'},{name: 'F#3'},
-      {name: 'F#4'},{name: 'F3'}, {name: 'F4'}, {name: 'G#3'},
-      {name: 'G#4'},{name: 'G3'}, {name: 'G4'}
+
+      // есть в пресетах, но нет в декларации
+      // {id:'', name:'Ab4', hint:''},
+      // {id:'', name:'D#4', hint:''},
+      // {id:'', name:'Db4', hint:''},
+      // есть в декларации, но нет в пресете
+      // Eb5 (ми-бем.)
+
+      {id:'1d', name:'C#3', hint:'до-ди.'},
+      {id:'2d', name:'D3', hint:'ре'}, 
+      {id:'3d', name:'E3', hint:'ми'}, 
+      {id:'4d', name:'F3', hint:'фа'}, 
+      {id:'5d', name:'F#3', hint:'фа-ди.'},
+      {id:'6d', name:'G3', hint:'соль'}, 
+
+      {id:'1s', name:'G3', hint:'соль'}, 
+      {id:'2s', name:'G#3', hint:'соль-ди.'},
+      {id:'3s', name:'A3', hint:'ля'}, 
+      {id:'4s', name:'Bb3', hint:'си-бем.'},
+      {id:'5s', name:'B3', hint:'си'},
+      {id:'6s', name:'C4', hint:'до'}, 
+      {id:'7s', name:'C#4', hint:'до-ди.'},
+      {id:'8s', name:'D4', hint:'ре'}, 
+      {id:'9s', name:'Eb4', hint:'ми-бем.'},
+      {id:'10s', name:'E4', hint:'ми'}, 
+      {id:'11s', name:'F4', hint:'фа'}, 
+      {id:'12s', name:'F#4', hint:'фа-ди.'},
+      {id:'13s', name:'G4', hint:'соль'},
+      {id:'14s', name:'G#4', hint:'соль-ди.'},
+      {id:'15s', name:'A4', hint:'ля'}, 
+      {id:'16s', name:'B4', hint:'си'}, 
+      {id:'17s', name:'C5', hint:'до'}, 
+      {id:'18s', name:'C#5', hint:'до-ди.'},
+      {id:'19s', name:'D5', hint:'ре'}
     ]    
   }
 }
+
 
 export const preset = (state = initialState, action) => {
   switch (action.type) {

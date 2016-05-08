@@ -23,14 +23,19 @@ const Note = (props) => {
 
 Note.propTypes = {
   number:          React.PropTypes.number.isRequired,
-  cx:              React.PropTypes.string.isRequired,
-  cy:              React.PropTypes.string.isRequired,
-  transformCircle: React.PropTypes.string.isRequired,
-  transformText:   React.PropTypes.string.isRequired,
+  cx:              React.PropTypes.string,
+  cy:              React.PropTypes.string,
+  transformCircle: React.PropTypes.string,
+  transformText:   React.PropTypes.string,
   outerCircle:     React.PropTypes.bool
 }
+
 Note.defaultProps = {
-  outerCircle: true
+  outerCircle: true,
+  cx:              "500",
+  cy:              "500",
+  transformCircle: "rotate(-89.88 43.81 500.48)",
+  transformText:   "translate(34.1 59.78)"
 }
 
 export default Note;

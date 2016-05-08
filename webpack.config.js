@@ -1,9 +1,18 @@
+var webpack = require('webpack');
+
 module.exports = {
     entry: "./src/entry.js",
     output: {
         path:'./public',
         filename: "bundle.js"
     },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        })
+    ],
     module: {
         loaders: [
             { test: /\.css$/, loader: "style!css" },
@@ -22,9 +31,19 @@ module.exports = {
                 loaders: ["style", "css", "sass?indentedSyntax"]
             },
             {
+                test: /\.(less)$/,
+                loader: "style!css!less"
+            },            
+            {
                 test: /\.(png)$/,
                 loader: 'url-loader?limit=10000&mimetype=image/png'
-            }            
+            },            
+            {
+                test: /\.(svg)$/,
+                loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
+            },
+            { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]'},
+            { test: /\.(ttf|eot)(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?name=fonts/[name].[ext]'},                        
         ]
     }
 };
