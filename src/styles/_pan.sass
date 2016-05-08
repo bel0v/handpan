@@ -1,0 +1,44 @@
+.mainPan
+  width: 400px
+
+.cls-1,.cls-2,.cls-3,.cls-4 
+  fill: transparent
+  stroke-miterlimit: 10
+
+.cls-1,.cls-3 
+  stroke: $color-blue
+
+.cls-1 
+  stroke-width: 2px
+
+.cls-2 
+  stroke: $color-blue
+  &.fake
+    stroke: transparent
+    stroke-width: 160px
+    
+.cls-3,.cls-4 
+  stroke-width: 5px
+
+.cls-4 
+  stroke: $color-blue-light
+
+.cls-5 
+  font-size: 41.66px
+  fill: $color-blue-light
+  font-family: Neucha
+
+
+$group: group !default
+
+.mainPan 
+  > g:hover > g, .cls-2:hover + g
+    circle, text
+      stroke: $color-light
+    circle
+      stroke-width: 6px
+.palette-note:hover
+  circle, text
+    stroke: $color-light
+  circle
+    stroke-width: 6px
