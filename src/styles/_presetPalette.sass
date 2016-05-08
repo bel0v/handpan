@@ -2,17 +2,25 @@
   position: relative
   width: 100%
   padding-bottom: 50px
+
   &-left, &-right, &-middle
     position: absolute
     color: $color-light
+
   &-left
+    font-family: neucharegular
     right: 0
     margin-right: calc(50% + 90px)
     margin-top: 10px
+
   &-right
+    font-size: 12px
     left: 0
     margin-left: calc(50% + 90px)
+    color: #c8cbbd
+
   &-middle
+    font-family: neucharegular
     left: 0
     right: 0
     margin: auto
@@ -129,15 +137,17 @@ ul.dropdown-menu
   height: 38px
   cursor: inherit
   background: transparent
-  color: $color-light
+  color: #79a4d2
   border: 1px #c8cbbd solid
   border-radius: 4px
   .caret
     position: absolute
+    color: $color-light
     top: 50%
     right: 15px
     transform: translateY(-50%)
   &:hover, &:active, &:focus
+    color: $color-light
     border-color: $color-brown
     .caret
       color: $color-brown
