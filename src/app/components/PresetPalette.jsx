@@ -5,6 +5,7 @@ import Dropdown from 'bootstrap/js/dropdown.js'
 
 const PresetPalette = (props) => {
   const {preset, currentSounds, allSounds} = props;
+  console.log('allsounds:', currentSounds);
   return (
     <div className='palette-body'>
       {currentSounds.map(function(sound, gIndex) {

@@ -50,10 +50,15 @@ export default class PresetContainer extends React.Component {
     let {db} = this.props;
     let currentSounds = currentPreset.sounds.slice();
     currentSounds.shift(); // remove the first (ding) note
+    let duplicates = this.getDuplicates(currentSounds);
     let soundsInPreset = []; // filling this one with {name, hint} sound objects
     for (let sound of currentSounds) {
       let soundObj = helpers.getSoundByName(db, sound);
-      soundsInPreset.push({name: soundObj.name, hint: soundObj.hint, isDuplicate: false});
+      soundsInPreset.push({
+        name: soundObj.name, 
+        hint: soundObj.hint, 
+        isDuplicate: (~duplicates.indexOf(soundObj.name) ? true : false)
+      });
     }
     return soundsInPreset;
   }
@@ -84,4 +89,16 @@ export default class PresetContainer extends React.Component {
     editPreset(db, curSounds)(dispatch);
   }
 
+  getDuplicates = (array) => {
+    var uniq = array
+    .map((item) => {
+      return {count: 1, item: item}
+    })
+    .reduce((a, b) => {
+      a[b.item] = (a[b.item] || 0) + b.count
+      return a
+    }, {})
+
+    return Object.keys(uniq).filter((a) => uniq[a] > 1)
+  }
 }

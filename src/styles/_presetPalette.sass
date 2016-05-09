@@ -94,11 +94,16 @@ ul.dropdown-menu
     border-radius: 4px
     border: 1px solid $color-brown
     background: #c8cbbd
+    &.duplicate
+      background: #e5fd8b
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+
     &:hover, &:active, &:focus
       background: $color-brown
       color: $color-light
     &:active, &:focus
       outline: none    
+
 .note-dropdown-wrapper.open
   .dropdown-menu
     display: flex
