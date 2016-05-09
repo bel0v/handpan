@@ -1,6 +1,8 @@
 
 export const initialState = {
   currentPreset: {},
+  customPreset: {id: 'pCustom', name: 'Мой', sounds:[]},
+  canBeSaved: true,
   db: {
     presets: [
       {id: 'p1', name: '№1', sounds:["C#3","G#3","A3","C#4","Eb4","E4","F#4","G#4","B4"]},
@@ -67,6 +69,18 @@ export const preset = (state = initialState, action) => {
     case "UPDATE_PRESET":
       return Object.assign({}, state, {
         currentPreset: action.newCurrentPreset
+      });
+    case "ADD_PRESET":
+      return Object.assign({}, state, {
+        customPreset: action.newCustomPreset
+      });
+    case "TOGGLE_SAVING":
+      return Object.assign({}, state, {
+        canBeSaved: action.savingState
+      });
+    case "SAVE_CUSTOM_PRESET":
+      return Object.assign({}, state, {
+        customPreset: action.preset
       });
     default:
       return state;

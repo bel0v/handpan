@@ -1,0 +1,41 @@
+.proceed-buttons
+  margin-top: 70px
+  margin-bottom: 70px
+  .long-btn
+    position: relative
+    width: 167px
+    height: 38px
+    border-radius: 2px
+    text-transform: uppercase
+    font-size: 10px
+    border: none
+    cursor: inherit
+    letter-spacing: 3px
+    &:active, &:focus
+      outline: none    
+
+  .proceed-button-save
+    background: #c8cbbd
+    color: #605d6e
+    margin-right: 30px
+    .save-hint
+      position: absolute
+      display: none
+      letter-spacing: initial
+      text-transform: none
+      bottom: 110%
+      left: 0
+      font-size: 14px
+      color: $color-duplicate
+    &.disabled
+      background: #c5c6c2
+      .save-hint
+        display: block
+      &:active, &:focus
+        .save-hint
+          animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+
+  .proceed-button-proceed
+    background: #977c73
+    color: #dce1e8
+    margin-left: 30px

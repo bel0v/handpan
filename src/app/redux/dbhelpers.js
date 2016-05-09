@@ -3,6 +3,11 @@ const getPresetById = (db, presetId) =>
       return preset.id === presetId;
     })[0]
 
+const getPresetByName = (db, presetName) => 
+  db.presets.filter(function( preset ) {
+      return preset.name === presetName;
+    })[0]
+
 const getSoundByName = (db, soundName) => {
   return db.sounds.filter(function( sound ) {
       return sound.name === soundName;
@@ -11,5 +16,6 @@ const getSoundByName = (db, soundName) => {
 
 module.exports = {
   getPresetById,
+  getPresetByName,
   getSoundByName
 }

@@ -8,6 +8,21 @@ const chooseCurrentPreset = (db, presetId) => {
   }
 }
 
+const saveCustomPreset = (db, currentPreset) => {
+  return (dispatch) => {
+    currentPreset.name = 'Мой'
+    db.presets.splice(db.presets.indexOf(helpers.getPresetByName(db, 'Мой')), 1);
+    db.presets.unshift(currentPreset);
+    dispatch(savePreset(currentPreset));
+  }
+}
+
+const editPreset = (db, sounds) => {
+  return (dispatch) => {
+    let newCurrentPreset = {id: sounds.join('_'), name: '--', sounds: sounds};
+    dispatch(updatePreset(newCurrentPreset));
+  } 
+}
 
 const updatePreset = (newCurrentPreset) =>{
   return {
@@ -16,6 +31,31 @@ const updatePreset = (newCurrentPreset) =>{
   }
 }
 
+const addCustomPreset = (newCustomPreset) =>{
+  return {
+    type: 'ADD_PRESET',
+    newCustomPreset
+  }
+}
+
+const toggleSaving = (savingState) =>{
+  return {
+    type: 'TOGGLE_SAVING',
+    savingState
+  }
+}
+
+const savePreset = (preset) => {
+  return{
+    type: 'SAVE_CUSTOM_PRESET',
+    preset
+  }
+}
+
+
 module.exports = {
-  chooseCurrentPreset
+  chooseCurrentPreset,
+  editPreset,
+  toggleSaving,
+  saveCustomPreset
 }

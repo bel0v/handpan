@@ -40,6 +40,10 @@ module.exports = {
                 loader: 'url-loader?limit=10000&mimetype=image/png'
             },            
             {
+                test: /\.(ico)$/,
+                loader: 'url-loader?limit=10000&mimetype=image/x-icon'
+            },            
+            {
                 test: /\.(svg)$/,
                 loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
             },
