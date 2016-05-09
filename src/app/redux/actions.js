@@ -8,6 +8,12 @@ const chooseCurrentPreset = (db, presetId) => {
   }
 }
 
+const editPreset = (db, sounds) => {
+  return (dispatch) => {
+    let newCurrentPreset = {id: sounds.join('_'), name: '--', sounds: sounds};
+    dispatch(updatePreset(newCurrentPreset));
+  } 
+}
 
 const updatePreset = (newCurrentPreset) =>{
   return {
@@ -16,6 +22,14 @@ const updatePreset = (newCurrentPreset) =>{
   }
 }
 
+const addCustomPreset = (newCustomPreset) =>{
+  return {
+    type: 'ADD_PRESET',
+    newCustomPreset
+  }
+}
+
 module.exports = {
-  chooseCurrentPreset
+  chooseCurrentPreset,
+  editPreset
 }
