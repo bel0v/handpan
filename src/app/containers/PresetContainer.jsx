@@ -3,19 +3,24 @@ import PresetPalette from '../components/PresetPalette.jsx'
 import PresetPaletteHeader from '../components/PresetPaletteHeader.jsx'
 import { connect } from 'react-redux'
 import * as helpers from '../redux/dbhelpers.js'
-import {chooseCurrentPreset, editPreset} from '../redux/actions.js'
+import {chooseCurrentPreset, editPreset, toggleSaving} from '../redux/actions.js'
 
 @connect(
   state => ({
     currentPreset: state.currentPreset,
     customPreset: state.customPreset,
-    db: state.db
+    db: state.db,
+    canBeSaved: state.canBeSaved // not if there are duplicates
   })
 )
 export default class PresetContainer extends React.Component {
   constructor(props){
     super(props);
     this.chosenNotes = []; //these are to be filtered out of all available sounds
+    this.currentSounds = this.getCurrentSounds(props.currentPreset)
+  }
+  componentWillReceiveProps(nextProps){
+    this.currentSounds = this.getCurrentSounds(nextProps.currentPreset)
   }
 
   render() {
@@ -28,7 +33,6 @@ export default class PresetContainer extends React.Component {
       ding: soundObj.name}
 
     let allSounds = this.getAllSounds(db.sounds, soundObj.name);
-    let currentSounds = this.getCurrentSounds(currentPreset)
 
     return (
       <div className='preset-palette'>
@@ -38,7 +42,7 @@ export default class PresetContainer extends React.Component {
         choosePresetOption={this.choosePresetOption}/>
       <PresetPalette 
         preset={preset} 
-        currentSounds={currentSounds}
+        currentSounds={this.currentSounds}
         allSounds={allSounds}
         chooseNote={this.chooseNote}
       />
@@ -47,10 +51,13 @@ export default class PresetContainer extends React.Component {
   }
 
   getCurrentSounds = (currentPreset) =>{
-    let {db} = this.props;
+    let {db, dispatch} = this.props;
     let currentSounds = currentPreset.sounds.slice();
     currentSounds.shift(); // remove the first (ding) note
+    
     let duplicates = this.getDuplicates(currentSounds);
+    (duplicates.length > 0) ? dispatch(toggleSaving(false)) : dispatch(toggleSaving(true));
+
     let soundsInPreset = []; // filling this one with {name, hint} sound objects
     for (let sound of currentSounds) {
       let soundObj = helpers.getSoundByName(db, sound);

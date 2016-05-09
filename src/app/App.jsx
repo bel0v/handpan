@@ -1,14 +1,16 @@
 import React from 'react'
 import PanContainer from './containers/PanContainer.jsx'
 import PresetContainer from './containers/PresetContainer.jsx'
+import ProceedButtons from './components/ProceedButtons.jsx'
 import { connect } from 'react-redux'
-import {chooseCurrentPreset} from './redux/actions.js'
+import {chooseCurrentPreset, saveCustomPreset} from './redux/actions.js'
 
 
 @connect(
   state => ({
     currentPreset: state.currentPreset,
-    db: state.db
+    db: state.db,
+    canBeSaved: state.canBeSaved
   })
 )
 export default class App extends React.Component {
@@ -18,12 +20,27 @@ export default class App extends React.Component {
     chooseCurrentPreset(db, 'p1')(dispatch);
   }
   render() {
-    // const {db, currentPreset} = this.props;
+    const {canBeSaved} = this.props;
     return (
       <div className = 'main-wrapper'>
         <PresetContainer />
         <PanContainer />
+        <ProceedButtons onClickSave = {this.onClickSave} saveEnabled={canBeSaved}/>
       </div>
     )
   }
+
+  onClickSave = () => {
+    const {canBeSaved, dispatch, currentPreset, db} = this.props;
+    if (!canBeSaved) return;
+
+    saveCustomPreset(db, currentPreset)(dispatch);
+
+  }
+
+
+  onClickProceed = () => {
+  }
+
 }
+
