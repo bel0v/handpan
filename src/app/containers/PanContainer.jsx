@@ -5,7 +5,7 @@ export default class PanContainer extends React.Component {
 
   render() {
     return (
-      <Pan />
+      <Pan sounds={this.props.sounds}/>
     )
   }
 }

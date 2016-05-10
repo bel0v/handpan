@@ -4,7 +4,7 @@
 .cls-1,.cls-2,.cls-3,.cls-4 
   fill: transparent
   stroke-miterlimit: 10
-
+  
 .cls-1,.cls-3 
   stroke: $color-blue
 
@@ -18,10 +18,12 @@
     stroke-width: 160px
     
 .cls-3,.cls-4 
-  stroke-width: 5px
+  stroke-width: 4px
 
 .cls-4 
   stroke: $color-blue-light
+  transition: all ease-in 1.5s
+
 
 .cls-5 
   font-size: 41.66px
@@ -37,8 +39,13 @@ $group: group !default
       stroke: $color-light
     circle
       stroke-width: 6px
-.palette-note:hover
-  circle, text
-    stroke: $color-light
+      transition: none
+.palette-note
   circle
-    stroke-width: 6px
+
+  &:hover
+    circle, text
+      stroke: $color-light
+    circle
+      stroke-width: 6px
+      transition: none
