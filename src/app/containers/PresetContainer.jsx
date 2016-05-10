@@ -3,7 +3,7 @@ import PresetPalette from '../components/PresetPalette.jsx'
 import PresetPaletteHeader from '../components/PresetPaletteHeader.jsx'
 import { connect } from 'react-redux'
 import * as helpers from '../redux/dbhelpers.js'
-import {chooseCurrentPreset, editPreset, toggleSaving} from '../redux/actions.js'
+import {chooseCurrentPreset, editPreset, toggleSaving, updatePreset} from '../redux/actions.js'
 
 @connect(
   state => ({
@@ -36,18 +36,37 @@ export default class PresetContainer extends React.Component {
 
     return (
       <div className='preset-palette'>
-      <PresetPaletteHeader 
-        preset={preset} 
-        presetsList={db.presets} 
-        choosePresetOption={this.choosePresetOption}/>
-      <PresetPalette 
-        preset={preset} 
-        currentSounds={this.currentSounds}
-        allSounds={allSounds}
-        chooseNote={this.chooseNote}
-      />
+        <PresetPaletteHeader 
+          preset={preset} 
+          presetsList={db.presets} 
+          choosePresetOption={this.choosePresetOption}
+          onClickLeft = {this.presetShiftLeft}
+          onClickRight = {this.presetShiftRight} />
+        <PresetPalette 
+          preset={preset} 
+          currentSounds={this.currentSounds}
+          allSounds={allSounds}
+          chooseNote={this.chooseNote}
+        />
       </div>
     )
+  }
+  presetShiftLeft = () => {
+    const {currentPreset, db, dispatch} = this.props;
+    let dbPresetIndex = db.presets.indexOf(helpers.getPresetById(db, currentPreset.id));
+    if (~dbPresetIndex) { // current preset in db.presets
+      if (dbPresetIndex === 0) dbPresetIndex = db.presets.length;
+      dispatch(updatePreset(db.presets[dbPresetIndex - 1]))
+    }
+  }
+
+  presetShiftRight = () => {
+    const {currentPreset, db, dispatch} = this.props;
+    let dbPresetIndex = db.presets.indexOf(helpers.getPresetById(db, currentPreset.id));
+    if (~dbPresetIndex) { // current preset in db.presets
+      if (dbPresetIndex === db.presets.length - 1) dbPresetIndex = -1;
+      dispatch(updatePreset(db.presets[dbPresetIndex + 1]))
+    }
   }
 
   getCurrentSounds = (currentPreset) =>{

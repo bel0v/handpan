@@ -9,13 +9,13 @@ const PresetPaletteHeader = (props) => {
     <div className='palette-header'>
       <div className='palette-header-left'>
         <span className='note-icon'/>
-        Пре-set
+        <span>Пре-set</span>
       </div>
       <div className='palette-header-middle'>
-        <span className='arrow-icon left'/>
+        <span className='arrow-icon left' onClick={props.onClickLeft}/>
         <div className="preset-dropdown-wrapper">
           <button id="presetDropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {preset.name}
+            <span>{preset.name}</span>
             <span className="caret"></span>
           </button>
           <ul className="dropdown-menu" aria-labelledby="presetDropdown">
@@ -28,7 +28,7 @@ const PresetPaletteHeader = (props) => {
             })}
           </ul>
         </div>
-        <span className='arrow-icon right'/>
+        <span className='arrow-icon right' onClick={props.onClickRight}/>
       </div>
       <div className='palette-header-right'>
         <svg className='palette-note' viewBox="0 0 88.62 88.62">

@@ -11,7 +11,10 @@ const chooseCurrentPreset = (db, presetId) => {
 const saveCustomPreset = (db, currentPreset) => {
   return (dispatch) => {
     currentPreset.name = 'Мой'
-    db.presets.splice(db.presets.indexOf(helpers.getPresetByName(db, 'Мой')), 1);
+    // if custom preset in db, remove
+    let customPresetDbIndex = db.presets.indexOf(helpers.getPresetByName(db, 'Мой'));
+    if (~customPresetDbIndex) db.presets.splice(customPresetDbIndex, 1);
+    // add current custom preset to db
     db.presets.unshift(currentPreset);
     dispatch(savePreset(currentPreset));
   }
@@ -57,5 +60,6 @@ module.exports = {
   chooseCurrentPreset,
   editPreset,
   toggleSaving,
+  updatePreset,
   saveCustomPreset
 }
