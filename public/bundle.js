@@ -4464,10 +4464,10 @@
 	  var inner = _react2.default.createElement(
 	    'g',
 	    { className: "group-" + props.number + "-inner",
-	      onMouseEnter: !props.outerCircle ? function (event) {
+	      onMouseEnter: !props.outerCircle && props.sound ? function (event) {
 	        return helpers.playSound(props.sound);
 	      } : '',
-	      onTouchStart: !props.outerCircle ? function (event) {
+	      onTouchStart: !props.outerCircle && props.sound ? function (event) {
 	        return helpers.playSound(props.sound);
 	      } : '' },
 	    _react2.default.createElement('circle', { className: 'cls-4', cx: props.cx, cy: props.cy, r: '41.81', transform: props.transformCircle }),
@@ -4482,12 +4482,12 @@
 	    return _react2.default.createElement(
 	      'g',
 	      { className: "group-" + props.number,
-	        onMouseEnter: function onMouseEnter(event) {
+	        onMouseEnter: props.sound ? function (event) {
 	          return helpers.playSound(props.sound);
-	        },
-	        onTouchStart: function onTouchStart(event) {
+	        } : '',
+	        onTouchStart: props.sound ? function (event) {
 	          return helpers.playSound(props.sound);
-	        } },
+	        } : '' },
 	      _react2.default.createElement('circle', { className: 'cls-1', cx: props.cx, cy: props.cy, r: '70.08', transform: props.transformCircle }),
 	      inner
 	    );
@@ -4502,7 +4502,7 @@
 	  cy: _react2.default.PropTypes.string,
 	  transformCircle: _react2.default.PropTypes.string,
 	  transformText: _react2.default.PropTypes.string,
-	  soundPath: _react2.default.PropTypes.string,
+	  sound: _react2.default.PropTypes.string,
 	  outerCircle: _react2.default.PropTypes.bool
 	};
 	
