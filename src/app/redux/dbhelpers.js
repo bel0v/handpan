@@ -14,8 +14,29 @@ const getSoundByName = (db, soundName) => {
     })[0]
 }
 
+const playSound = (sound) => { //kinda anti-pattern, but this is more transparent.
+  let player = document.getElementById('player-'+sound);
+  let soundPlayed = false;
+  if(!soundPlayed) {
+    soundPlayed = true;
+    setTimeout(function() {
+      soundPlayed = false;
+    }, 300);
+    player.currentTime = 0;
+    player.play();
+  }
+};
+
+const stopSound = (sound) => { //kinda anti-pattern, but this is more transparent.
+  let player = document.getElementById('player-'+sound);
+  player.pause();
+};
+
+
 module.exports = {
   getPresetById,
   getPresetByName,
-  getSoundByName
+  getSoundByName,
+  stopSound,
+  playSound
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Note from './Note.jsx'
 import Dropdown from 'bootstrap/js/dropdown.js'
+import * as helpers from '../redux/dbhelpers.js'
 
 
 const PresetPalette = (props) => {
@@ -11,7 +12,7 @@ const PresetPalette = (props) => {
         return (
           <div key={'s'+ (gIndex+1)} className = 'palette-sound'>
             <svg className='palette-note' viewBox="0 0 88.62 88.62">
-              <Note number={gIndex + 1} outerCircle={false} />
+              <Note number={gIndex + 2} outerCircle={false} />
             </svg>
             <div className="note-dropdown-wrapper">
               <button 
@@ -30,6 +31,8 @@ const PresetPalette = (props) => {
                   return <div
                     className='dropdown-menu_note-item' 
                     key={'gs-'+index}
+                    onMouseEnter={(event) => helpers.playSound(gSound.name)}
+                    onMouseLeave={(event) => helpers.stopSound(gSound.name)}
                     onClick={(event) => {
                       props.chooseNote(gSound, gIndex + 1)}
                     }>

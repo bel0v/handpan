@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
     entry: "./src/entry.js",
@@ -14,6 +15,9 @@ module.exports = {
         })
     ],
     devtool: 'source-map',
+    resolve: {
+        root: path.resolve()
+    },
     module: {
         loaders: [
             { test: /\.css$/, loader: "style!css" },
@@ -49,6 +53,7 @@ module.exports = {
             },
             { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]'},
             { test: /\.(ttf|eot)(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?name=fonts/[name].[ext]'},                        
+            { test: /\.(mp3)$/, loader: 'file-loader?name=sounds/[name].[ext]'}
         ]
     }
 };
