@@ -79,7 +79,7 @@ export default class PresetContainer extends React.Component {
 
     let soundsInPreset = []; // filling this one with {name, hint} sound objects
     for (let sound of currentSounds) {
-      let soundObj = helpers.getSoundByName(db, sound);
+      let soundObj = helpers.getSoundByName(db, sound, true);
       soundsInPreset.push({
         name: soundObj.name, 
         hint: soundObj.hint, 

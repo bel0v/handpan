@@ -33,7 +33,7 @@ Note.propTypes = {
   cy:              React.PropTypes.string,
   transformCircle: React.PropTypes.string,
   transformText:   React.PropTypes.string,
-  sound:       React.PropTypes.string,
+  sound:           React.PropTypes.string,
   outerCircle:     React.PropTypes.bool
 }
 

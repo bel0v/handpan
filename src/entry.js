@@ -8,7 +8,7 @@ import { preset, initialState } from './app/redux/reducers.js'
 import * as dbHelpers from './app/redux/dbhelpers.js'
 import { Provider } from 'react-redux'
 
-require.context("./sounds", true, /\.(mp3)$/)
+require.context("./sounds/samples-pan/", true, /\.(mp3)$/)
 
 main();
 

@@ -8,14 +8,14 @@ const getPresetByName = (db, presetName) =>
       return preset.name === presetName;
     })[0]
 
-const getSoundByName = (db, soundName) => {
+const getSoundByName = (db, soundName, noDings = false) => {
   return db.sounds.filter(function( sound ) {
-      return sound.name === soundName;
+      return sound.name === soundName && (!noDings || !(~sound.id.indexOf('d')));
     })[0]
 }
 
-const playSound = (sound) => { //kinda anti-pattern, but this is more transparent.
-  let player = document.getElementById('player-'+sound);
+const playSound = (soundId) => { //kinda anti-pattern, but this is more transparent.
+  let player = document.getElementById('player-'+soundId);
   let soundPlayed = false;
   if(!soundPlayed) {
     soundPlayed = true;

@@ -6,10 +6,10 @@ const PlayersContainer = (props) =>
       props.sounds.map(function(sound){
         return (
           <audio 
-            key = {'player--' + sound.name} 
-            id = {'player-' + sound.name} 
+            key = {'player--' + sound.id} 
+            id = {'player-' + sound.id} 
             preload = 'auto' 
-            src = {encodeURIComponent('sounds/'+ sound.name +'.mp3')}/>
+            src = {encodeURIComponent('sounds/'+ sound.id +'.mp3')}/>
         )
       })
     }

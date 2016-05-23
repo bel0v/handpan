@@ -25,7 +25,7 @@ export default class App extends React.Component {
     return (
       <div className = 'main-wrapper'>
         <PresetContainer />
-        <PanContainer sounds={currentPreset.sounds ? currentPreset.sounds : []}/>
+        <PanContainer sounds={currentPreset.sounds ? currentPreset.sounds : []} db={db}/>
         <ProceedButtons onClickSave = {this.onClickSave} saveEnabled={canBeSaved}/>
         <PlayersContainer sounds = {db.sounds}/>
       </div>

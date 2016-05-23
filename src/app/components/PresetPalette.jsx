@@ -31,8 +31,8 @@ const PresetPalette = (props) => {
                   return <div
                     className='dropdown-menu_note-item' 
                     key={'gs-'+index}
-                    onMouseEnter={(event) => helpers.playSound(gSound.name)}
-                    onMouseLeave={(event) => helpers.stopSound(gSound.name)}
+                    onMouseEnter={(event) => helpers.playSound(gSound.id)}
+                    onMouseLeave={(event) => helpers.stopSound(gSound.id)}
                     onClick={(event) => {
                       props.chooseNote(gSound, gIndex + 1)}
                     }>
