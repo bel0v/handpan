@@ -43,12 +43,11 @@ $group: group !default
     circle
       stroke-width: 6px
       transition: none
-.palette-note
-  circle
 
-  &:hover
-    circle, text
-      stroke: $color-light
-    circle
-      stroke-width: 6px
-      transition: none
+.note-dropdown-wrapper.open + .palette-note
+  background: red
+  circle, text
+    stroke: $color-light
+  circle
+    stroke-width: 6px
+    transition: none

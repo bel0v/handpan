@@ -18,6 +18,7 @@ const PresetPalette = (props) => {
               <button 
                 className={'note-dropdown ' + (sound.isDuplicate ? 'duplicate' : '')} 
                 id={"noteDropdown-"+ gIndex+1} 
+                ref={"dd_"+ gIndex+1} 
                 type="button" 
                 data-toggle="dropdown" 
                 aria-haspopup="true" 
@@ -27,6 +28,9 @@ const PresetPalette = (props) => {
                 <span className="caret"></span>
               </button>
               <div className={"dropdown-menu note-dropdown" + (gIndex + 1 < 5 ? ' upper' : '')} aria-labelledby={"noteDropdown-"+ gIndex+1}>
+                <div 
+                  className='dropdown-close' 
+                  onClick ={event => this.refs[`dd_${gIndex+1}`].toggle()}/>
                 {allSounds.map(function(gSound, index) {
                   return <div
                     className={'dropdown-menu_note-item ' + (gSound.name === sound.name ? 'active' : '')} 
