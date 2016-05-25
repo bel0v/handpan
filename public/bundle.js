@@ -129,7 +129,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'neucharegular';\n  src: url(" + __webpack_require__(8) + ") format(\"woff2\"), url(" + __webpack_require__(9) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'andikaregular';\n  src: url(" + __webpack_require__(10) + ") format(\"woff2\"), url(" + __webpack_require__(11) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal; }\n\n@keyframes shake {\n  10%, 90% {\n    transform: translate3d(-1px, 0, 0); }\n  20%, 80% {\n    transform: translate3d(2px, 0, 0); }\n  30%, 50%, 70% {\n    transform: translate3d(-4px, 0, 0); }\n  40%, 60% {\n    transform: translate3d(4px, 0, 0); } }\n\n@-webkit-keyframes shake {\n  10%, 90% {\n    transform: translate3d(-1px, 0, 0); }\n  20%, 80% {\n    transform: translate3d(2px, 0, 0); }\n  30%, 50%, 70% {\n    transform: translate3d(-4px, 0, 0); }\n  40%, 60% {\n    transform: translate3d(4px, 0, 0); } }\n\n.mainPan {\n  width: 400px; }\n\n.cls-1, .cls-2, .cls-3, .cls-4 {\n  fill: transparent;\n  stroke-miterlimit: 10; }\n\n.cls-1, .cls-3 {\n  stroke: #667893; }\n\n.cls-1 {\n  stroke-width: 2px; }\n\n.cls-2 {\n  stroke: #667893; }\n  .cls-2.fake {\n    stroke: transparent;\n    stroke-width: 160px; }\n\n.cls-3, .cls-4 {\n  stroke-width: 4px; }\n\n.cls-4 {\n  stroke: #b2c7e7;\n  transition: all ease-in 1.5s; }\n\n.cls-5 {\n  font-size: 41.66px;\n  fill: #b2c7e7;\n  font-family: neucharegular; }\n\n.mainPan > g:hover > g circle, .mainPan > g:hover > g text, .mainPan .cls-2:hover + g circle, .mainPan .cls-2:hover + g text {\n  stroke: #e8ead9; }\n\n.mainPan > g:hover > g circle, .mainPan .cls-2:hover + g circle {\n  stroke-width: 6px;\n  transition: none; }\n\n.palette-note:hover circle, .palette-note:hover text {\n  stroke: #e8ead9; }\n\n.palette-note:hover circle {\n  stroke-width: 6px;\n  transition: none; }\n\n.palette-header {\n  position: relative;\n  width: 100%;\n  padding-bottom: 50px; }\n  .palette-header-left, .palette-header-right, .palette-header-middle {\n    position: absolute;\n    color: #e8ead9; }\n  .palette-header-left, .palette-header-middle {\n    -webkit-user-select: none; }\n  .palette-header-left {\n    font-family: neucharegular;\n    right: 0;\n    margin-right: calc(50% + 90px);\n    margin-top: 10px; }\n  .palette-header-right {\n    font-size: 12px;\n    left: 0;\n    margin-left: calc(50% + 90px);\n    color: #c8cbbd; }\n  .palette-header-middle {\n    font-family: neucharegular;\n    left: 0;\n    right: 0;\n    margin: auto;\n    padding-top: 2px; }\n\n.palette-note {\n  width: 42px;\n  vertical-align: middle;\n  margin-right: 10px; }\n\n.note-icon {\n  width: 22px;\n  height: 22px;\n  display: inline-block;\n  background: url(" + __webpack_require__(12) + ");\n  vertical-align: middle;\n  background-repeat: no-repeat;\n  margin-right: 5px; }\n\n.arrow-svg {\n  fill: #79a4d2; }\n  .arrow-svg:hover {\n    fill: #e8ead9; }\n\n.arrow-icon {\n  width: 10px;\n  height: 19px;\n  background: url(" + __webpack_require__(13) + ");\n  display: inline-block;\n  vertical-align: middle;\n  background-repeat: no-repeat; }\n  .arrow-icon.left {\n    transform: scaleX(-1);\n    margin-right: 10px; }\n  .arrow-icon.right {\n    margin-left: 10px; }\n  .arrow-icon:hover {\n    -webkit-filter: brightness(180%);\n    filter: brightness(180%); }\n\n.preset-dropdown-wrapper {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle; }\n\nul.dropdown-menu {\n  transform: translateX(-50%);\n  left: 50%;\n  color: #605d6e; }\n  ul.dropdown-menu[aria-labelledby='presetDropdown'] {\n    margin-top: 0;\n    min-width: 73px; }\n  ul.dropdown-menu li {\n    height: 34px;\n    line-height: 34px;\n    font-size: 16px;\n    padding-left: 15px; }\n    ul.dropdown-menu li:hover {\n      background: #967b73;\n      color: #e8ead9; }\n\n.note-dropdown-wrapper {\n  margin-top: 20px;\n  min-width: 115px; }\n  .note-dropdown-wrapper button.note-dropdown {\n    cursor: inherit;\n    padding-top: 10px;\n    padding-bottom: 10px;\n    padding-right: 12px;\n    border-radius: 4px;\n    border: 1px solid #967b73;\n    background: #c8cbbd; }\n    .note-dropdown-wrapper button.note-dropdown.duplicate {\n      background: #e5fd8b;\n      animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }\n    .note-dropdown-wrapper button.note-dropdown:hover, .note-dropdown-wrapper button.note-dropdown:active, .note-dropdown-wrapper button.note-dropdown:focus {\n      background: #967b73;\n      color: #e8ead9; }\n    .note-dropdown-wrapper button.note-dropdown:active, .note-dropdown-wrapper button.note-dropdown:focus {\n      outline: none; }\n\n.note-dropdown-wrapper.open .dropdown-menu {\n  display: flex; }\n\n.note-dropdown-wrapper.open .dropdown-menu.note-dropdown {\n  top: calc(100% - 85px);\n  flex-wrap: wrap;\n  left: 0;\n  right: 0;\n  padding: 25px;\n  background: #e8ead9;\n  border-radius: 10px;\n  -webkit-box-shadow: none;\n  -moz-box-shadow: none;\n  box-shadow: none; }\n  .note-dropdown-wrapper.open .dropdown-menu.note-dropdown.upper {\n    top: calc(0% + 163px); }\n\n.note-dropdown-wrapper.open .dropdown-menu_note-item {\n  text-align: center;\n  flex: 13%;\n  max-width: 100px;\n  padding: 12px;\n  border-radius: 4px;\n  margin: 5px;\n  margin-bottom: 10px;\n  user-select: none; }\n  .note-dropdown-wrapper.open .dropdown-menu_note-item:hover {\n    background: #967b73;\n    color: #e8ead9; }\n\n#presetDropdown {\n  text-align: left;\n  padding-left: 15px;\n  width: 73px;\n  height: 38px;\n  cursor: inherit;\n  background: transparent;\n  color: #79a4d2;\n  border: 1px #c8cbbd solid;\n  border-radius: 4px; }\n  #presetDropdown .caret {\n    position: absolute;\n    color: #e8ead9;\n    top: 50%;\n    right: 15px;\n    transform: translateY(-50%); }\n  #presetDropdown:hover, #presetDropdown:active, #presetDropdown:focus {\n    color: #e8ead9;\n    border-color: #967b73; }\n    #presetDropdown:hover .caret, #presetDropdown:active .caret, #presetDropdown:focus .caret {\n      color: #967b73; }\n  #presetDropdown:active, #presetDropdown:focus {\n    outline: none; }\n\n.palette-body {\n  padding-top: 60px;\n  max-width: 860px;\n  margin: auto;\n  position: relative; }\n  .palette-body .palette-sound {\n    margin-bottom: 87px;\n    display: inline-block;\n    margin-left: 30px;\n    margin-right: 30px; }\n    .palette-body .palette-sound .palette-note {\n      margin-right: 0; }\n\n.proceed-buttons {\n  margin-top: 70px;\n  margin-bottom: 70px; }\n  .proceed-buttons .long-btn {\n    position: relative;\n    width: 167px;\n    height: 38px;\n    border-radius: 2px;\n    text-transform: uppercase;\n    font-size: 10px;\n    border: none;\n    cursor: inherit;\n    letter-spacing: 3px; }\n    .proceed-buttons .long-btn:active, .proceed-buttons .long-btn:focus {\n      outline: none; }\n  .proceed-buttons .proceed-button-save {\n    background: #c8cbbd;\n    color: #605d6e;\n    margin-right: 30px; }\n    .proceed-buttons .proceed-button-save .save-hint {\n      position: absolute;\n      display: none;\n      letter-spacing: initial;\n      text-transform: none;\n      bottom: 110%;\n      left: 0;\n      font-size: 14px;\n      color: #e5fd8b; }\n    .proceed-buttons .proceed-button-save.disabled {\n      background: #c5c6c2; }\n      .proceed-buttons .proceed-button-save.disabled .save-hint {\n        display: block; }\n      .proceed-buttons .proceed-button-save.disabled:active .save-hint, .proceed-buttons .proceed-button-save.disabled:focus .save-hint {\n        animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }\n  .proceed-buttons .proceed-button-proceed {\n    background: #977c73;\n    color: #dce1e8;\n    margin-left: 30px; }\n\nbody {\n  background-color: #3c3c3c;\n  font-family: andikaregular, sans-serif;\n  cursor: url(" + __webpack_require__(14) + ") 10 3, default;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.main-wrapper {\n  padding-top: 50px;\n  text-align: center; }\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: 'neucharegular';\n  src: url(" + __webpack_require__(8) + ") format(\"woff2\"), url(" + __webpack_require__(9) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'andikaregular';\n  src: url(" + __webpack_require__(10) + ") format(\"woff2\"), url(" + __webpack_require__(11) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal; }\n\n@keyframes shake {\n  10%, 90% {\n    transform: translate3d(-1px, 0, 0); }\n  20%, 80% {\n    transform: translate3d(2px, 0, 0); }\n  30%, 50%, 70% {\n    transform: translate3d(-4px, 0, 0); }\n  40%, 60% {\n    transform: translate3d(4px, 0, 0); } }\n\n@-webkit-keyframes shake {\n  10%, 90% {\n    transform: translate3d(-1px, 0, 0); }\n  20%, 80% {\n    transform: translate3d(2px, 0, 0); }\n  30%, 50%, 70% {\n    transform: translate3d(-4px, 0, 0); }\n  40%, 60% {\n    transform: translate3d(4px, 0, 0); } }\n\n.mainPan {\n  width: 400px; }\n\n.cls-1, .cls-2, .cls-3, .cls-4 {\n  fill: transparent;\n  stroke-miterlimit: 10; }\n\n.cls-1, .cls-3 {\n  stroke: #667893; }\n\n.cls-1 {\n  stroke-width: 2px; }\n\n.cls-2 {\n  stroke: #667893; }\n  .cls-2.fake {\n    stroke: transparent;\n    stroke-width: 160px; }\n\n.cls-3, .cls-4 {\n  stroke-width: 4px; }\n\n.cls-4 {\n  stroke: #b2c7e7;\n  transition: all ease-in 1.5s; }\n\n.cls-5 {\n  font-size: 41.66px;\n  fill: #b2c7e7;\n  font-family: neucharegular; }\n\n.mainPan g {\n  cursor: pointer; }\n\n.mainPan > g:hover > g circle, .mainPan > g:hover > g text, .mainPan .cls-2:hover + g circle, .mainPan .cls-2:hover + g text {\n  stroke: #e8ead9; }\n\n.mainPan > g:hover > g circle, .mainPan .cls-2:hover + g circle {\n  stroke-width: 6px;\n  transition: none; }\n\n.note-dropdown-wrapper.open + .palette-note {\n  background: red; }\n  .note-dropdown-wrapper.open + .palette-note circle, .note-dropdown-wrapper.open + .palette-note text {\n    stroke: #e8ead9; }\n  .note-dropdown-wrapper.open + .palette-note circle {\n    stroke-width: 6px;\n    transition: none; }\n\n.palette-header {\n  position: relative;\n  width: 100%;\n  padding-bottom: 50px; }\n  .palette-header-left, .palette-header-right, .palette-header-middle {\n    position: absolute;\n    color: #e8ead9; }\n  .palette-header-left, .palette-header-middle {\n    -webkit-user-select: none; }\n  .palette-header-left {\n    font-family: neucharegular;\n    right: 0;\n    margin-right: calc(50% + 90px);\n    margin-top: 10px; }\n  .palette-header-right {\n    font-size: 12px;\n    left: 0;\n    margin-left: calc(50% + 90px);\n    color: #c8cbbd; }\n  .palette-header-middle {\n    font-family: neucharegular;\n    left: 0;\n    right: 0;\n    margin: auto;\n    padding-top: 2px; }\n\n.palette-note {\n  width: 42px;\n  vertical-align: middle;\n  margin-right: 10px; }\n\n.note-icon {\n  width: 22px;\n  height: 22px;\n  display: inline-block;\n  background: url(" + __webpack_require__(12) + ");\n  vertical-align: middle;\n  background-repeat: no-repeat;\n  margin-right: 5px; }\n\n.arrow-svg {\n  fill: #79a4d2; }\n  .arrow-svg:hover {\n    fill: #e8ead9; }\n\n.arrow-icon {\n  width: 10px;\n  height: 19px;\n  background: url(" + __webpack_require__(13) + ");\n  display: inline-block;\n  vertical-align: middle;\n  background-repeat: no-repeat; }\n  .arrow-icon.left {\n    transform: scaleX(-1);\n    margin-right: 10px; }\n  .arrow-icon.right {\n    margin-left: 10px; }\n  .arrow-icon:hover {\n    -webkit-filter: brightness(180%);\n    filter: brightness(180%); }\n\n.preset-dropdown-wrapper {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle; }\n\nul.dropdown-menu {\n  transform: translateX(-50%);\n  left: 50%;\n  color: #605d6e; }\n  ul.dropdown-menu[aria-labelledby='presetDropdown'] {\n    margin-top: 0;\n    min-width: 73px; }\n  ul.dropdown-menu li {\n    cursor: pointer;\n    height: 34px;\n    line-height: 34px;\n    font-size: 16px;\n    padding-left: 15px; }\n    ul.dropdown-menu li:hover {\n      background: #967b73;\n      color: #e8ead9; }\n    ul.dropdown-menu li.disabled {\n      pointer-events: none;\n      color: #a6a6a6; }\n\n.note-dropdown-wrapper {\n  margin-top: 20px;\n  min-width: 115px; }\n  .note-dropdown-wrapper button.note-dropdown {\n    padding-top: 10px;\n    padding-bottom: 10px;\n    padding-right: 12px;\n    border-radius: 4px;\n    border: 1px solid #967b73;\n    background: #c8cbbd; }\n    .note-dropdown-wrapper button.note-dropdown.duplicate {\n      background: #e5fd8b;\n      animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }\n    .note-dropdown-wrapper button.note-dropdown:hover, .note-dropdown-wrapper button.note-dropdown:active, .note-dropdown-wrapper button.note-dropdown:focus {\n      background: #967b73;\n      color: #e8ead9; }\n    .note-dropdown-wrapper button.note-dropdown:active, .note-dropdown-wrapper button.note-dropdown:focus {\n      outline: none; }\n\n.note-dropdown-wrapper.open .dropdown-menu {\n  display: flex; }\n\n.note-dropdown-wrapper.open .dropdown-menu.note-dropdown {\n  top: calc(100% - 85px);\n  flex-wrap: wrap;\n  left: 0;\n  right: 0;\n  padding: 25px;\n  background: #e8ead9;\n  border-radius: 10px;\n  -webkit-box-shadow: none;\n  -moz-box-shadow: none;\n  box-shadow: none; }\n  .note-dropdown-wrapper.open .dropdown-menu.note-dropdown.upper {\n    top: calc(0% + 163px); }\n\n.note-dropdown-wrapper.open .dropdown-menu_note-item {\n  cursor: pointer;\n  text-align: center;\n  flex: 13%;\n  max-width: 100px;\n  padding: 12px;\n  border-radius: 4px;\n  margin: 5px;\n  margin-bottom: 10px;\n  user-select: none; }\n  .note-dropdown-wrapper.open .dropdown-menu_note-item:hover, .note-dropdown-wrapper.open .dropdown-menu_note-item.active {\n    background: #967b73;\n    color: #e8ead9; }\n\n#presetDropdown {\n  text-align: left;\n  padding-left: 15px;\n  width: 73px;\n  height: 38px;\n  background: transparent;\n  color: #79a4d2;\n  border: 1px #c8cbbd solid;\n  border-radius: 4px; }\n  #presetDropdown .caret {\n    position: absolute;\n    color: #e8ead9;\n    top: 50%;\n    right: 15px;\n    transform: translateY(-50%); }\n  #presetDropdown:hover, #presetDropdown:active, #presetDropdown:focus {\n    color: #e8ead9;\n    border-color: #967b73; }\n    #presetDropdown:hover .caret, #presetDropdown:active .caret, #presetDropdown:focus .caret {\n      color: #967b73; }\n  #presetDropdown:active, #presetDropdown:focus {\n    outline: none; }\n\n.palette-body {\n  padding-top: 60px;\n  max-width: 860px;\n  margin: auto;\n  position: relative; }\n  .palette-body .palette-sound {\n    margin-bottom: 87px;\n    display: inline-block;\n    margin-left: 30px;\n    margin-right: 30px; }\n    .palette-body .palette-sound .palette-note {\n      margin-right: 0; }\n\n.dropdown-close {\n  position: absolute;\n  top: 14px;\n  right: 14px;\n  background: url(" + __webpack_require__(14) + ");\n  width: 16px;\n  height: 16px;\n  cursor: pointer; }\n\n.proceed-buttons {\n  margin-top: 70px;\n  margin-bottom: 70px; }\n  .proceed-buttons .long-btn {\n    position: relative;\n    width: 167px;\n    height: 38px;\n    border-radius: 2px;\n    text-transform: uppercase;\n    font-size: 10px;\n    border: none;\n    cursor: pointer;\n    letter-spacing: 3px; }\n    .proceed-buttons .long-btn:active, .proceed-buttons .long-btn:focus {\n      outline: none; }\n  .proceed-buttons .proceed-button-save {\n    background: #c8cbbd;\n    color: #605d6e;\n    margin-right: 30px; }\n    .proceed-buttons .proceed-button-save .save-hint {\n      position: absolute;\n      display: none;\n      letter-spacing: initial;\n      text-transform: none;\n      bottom: 110%;\n      left: 0;\n      font-size: 14px;\n      color: #e5fd8b; }\n    .proceed-buttons .proceed-button-save.disabled {\n      background: #c5c6c2; }\n      .proceed-buttons .proceed-button-save.disabled .save-hint {\n        display: block; }\n      .proceed-buttons .proceed-button-save.disabled:active .save-hint, .proceed-buttons .proceed-button-save.disabled:focus .save-hint {\n        animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }\n  .proceed-buttons .proceed-button-proceed {\n    background: #977c73;\n    color: #dce1e8;\n    margin-left: 30px; }\n\nbody {\n  background-color: #3c3c3c;\n  font-family: andikaregular, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.main-wrapper {\n  padding-top: 50px;\n  text-align: center; }\n\nbutton {\n  cursor: pointer; }\n", ""]);
 	
 	// exports
 
@@ -224,13 +224,13 @@
 /* 13 */
 /***/ function(module, exports) {
 
-	module.exports = "data:image/svg+xml;base64,PHN2ZyBpZD0iYXJyb3ciIGRhdGEtbmFtZT0iSXNvbGF0aW9uIE1vZGUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEwLjIgMTkuMyI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5hcnJvdy1zdmd7ZmlsbDojNzlhNGQyO30KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDx0aXRsZT4KICAgIGFycm93CiAgPC90aXRsZT4KICA8cGF0aCBjbGFzcz0iYXJyb3ctc3ZnIiBkPSJNLjk1LjE2YS41Ni41NiAwIDEgMC0uNzkuNzlsOC42OSA4LjctOC42OSA4LjcxYS41NS41NSAwIDAgMCAwIC43OS41Ni41NiAwIDAgMCAuNzggMEwxMCAxMGEuNTYuNTYgMCAwIDAgMC0uNzl6Ii8+Cjwvc3ZnPg=="
+	module.exports = "data:image/svg+xml;base64,PHN2ZyBpZD0iYXJyb3ciIGRhdGEtbmFtZT0iSXNvbGF0aW9uIE1vZGUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEwLjIgMTkuMyI+DQogIDxkZWZzPg0KICAgIDxzdHlsZT4NCiAgICAgIC5hcnJvdy1zdmd7ZmlsbDojNzlhNGQyO30NCiAgICA8L3N0eWxlPg0KICA8L2RlZnM+DQogIDx0aXRsZT4NCiAgICBhcnJvdw0KICA8L3RpdGxlPg0KICA8cGF0aCBjbGFzcz0iYXJyb3ctc3ZnIiBkPSJNLjk1LjE2YS41Ni41NiAwIDEgMC0uNzkuNzlsOC42OSA4LjctOC42OSA4LjcxYS41NS41NSAwIDAgMCAwIC43OS41Ni41NiAwIDAgMCAuNzggMEwxMCAxMGEuNTYuNTYgMCAwIDAgMC0uNzl6Ii8+DQo8L3N2Zz4="
 
 /***/ },
 /* 14 */
 /***/ function(module, exports) {
 
-	module.exports = "data:image/x-icon;base64,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WuhiYmLodXV16G1tbehaWlroaWlp6HZ2duhlZWXoW1tb6G5ubuhzc3PoX19f6F9fX+htbW3pdXV15////+erq6ulAAAAPwAAACcAAAATAAAABQAAAAMAAAADZWVlOf///8mxsbHsampq6mlpaehOTk7qdnZ25ubm5t3////X7+/v139/f+ZoaGjpXV1d6GJiYuh3d3fobGxs6FtbW+hnZ2foeHh46GVlZehbW1vobm5u6HZ2duhfX1/oWlpa6Xd3d+f////oq6urpAAAADsAAAAlAAAAEgAAAAUAAAADAAAAAHl5eUL////UnJyc7ExMTOphYWHqZWVl6Nzc3OD7+/vIx8fHturq6ttqamrmZmZm6XJycuhcXFzoYGBg6HZ2duhsbGzoWlpa6GdnZ+h2dnboZmZm6FtbW+hubm7odHR06FtbW+ljY2Pn////6bCwsKEAAAA1AAAAIQAAABEAAAAFAAAAAwAAAARAQEAX+vr6ut/f3+1ubm7mcnJy5snJyeH////jcnJyhZiYmJP4+PjhbGxs5lRUVOlycnLob29v6FxcXOhiYmLodHR06Gtra+haWlroaWlp6HV1dehkZGToW1tb6G5ubuhtbW3pYmJi5////+y1tbWeAAAAKgAAAB0AAAAPAAAABAAAAAEAAAAHAAAAAIuLi0z////R////7f39/ev////quLi4kQkJCTqurq6S+fn5435+fuZaWlrpXl5e6HJycuhycnLoXV1d6GJiYuh1dXXobW1t6FtbW+hoaGjodXV16GRkZOhWVlbpXl5e6oGBgef////rkJCQiQAAABsAAAAYAAAACwAAAAMAAAABAAAAAwAAAAcKCgoCTk5OLs3NzXDMzMx1UVFRTQMDAyIAAAAnx8fHk/Hx8eR5eXnmbGxs6WNjY+hcXFzocnJy6HNzc+hdXV3oYGBg6Hd3d+hqamroUFBQ6VhYWOpvb2/oaGho54ODg+fw8PDt////1lRUVE8AAAAUAAAAEgAAAAcAAAACAAAAAQAAAAIAAAAFAAAABgAAAAAFBQUCBAQEBgAAAAAAAAAQAgICJMnJyYz09PTlaGho5mFhYel0dHToYGBg6FhYWOlycnLocHBw6FRUVOlNTU3rZ2dn6nV1deaIiIjlwMDA5v///+z////l////y4WFhW4CAgIXAAAAFAAAAAsAAAAEAAAAAQAA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"
+	module.exports = "data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTUuNyAxNS43Ij4NCiAgPHN0eWxlPg0KICAgIC5zdDB7ZmlsbDojOTY3YjczO3N0cm9rZTojOTY3YjczO3N0cm9rZS13aWR0aDowLjI1O3N0cm9rZS1taXRlcmxpbWl0OjEwO30NCiAgPC9zdHlsZT4NCiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTcuOSAxNS42Yy0xLjcgMC0zLjQtLjYtNC44LTEuNkMxLjUgMTIuNy40IDEwLjkuMiA4LjhjLS4zLTIuMS4zLTQuMSAxLjYtNS43IDEuNS0xLjkgMy43LTMgNi4xLTMgMS43IDAgMy40LjYgNC44IDEuNiAxLjYgMS4zIDIuNyAzLjEgMi45IDUuMi4yIDIuMS0uNCA0LjEtMS42IDUuNy0xLjUgMS45LTMuNyAzLTYuMSAzek03LjkuOGMtMi4yIDAtNC4yIDEtNS42IDIuN0MxLjIgNSAuNyA2LjkuOSA4LjdjLjIgMS45IDEuMiAzLjUgMi43IDQuNyAxLjIgMSAyLjcgMS41IDQuMyAxLjUgMi4yIDAgNC4yLTEgNS42LTIuNyAxLjItMS41IDEuNy0zLjMgMS40LTUuMi0uMi0xLjktMS4yLTMuNS0yLjctNC43QzEwLjkgMS4zIDkuNS44IDcuOS44eiIvPg0KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNC43MzIgNS4yNWwuNDI0LS40MjMgNS43MjggNS43MjctLjQyNS40MjV6Ii8+DQogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00LjczMiAxMC40ODRsNS43MjctNS43MjguNDI0LjQyNS01LjcyOCA1LjcyOHoiLz4NCjwvc3ZnPg=="
 
 /***/ },
 /* 15 */
@@ -609,7 +609,7 @@
 	        'div',
 	        { className: 'main-wrapper' },
 	        _react2.default.createElement(_PresetContainer2.default, null),
-	        _react2.default.createElement(_PanContainer2.default, { sounds: currentPreset.sounds ? currentPreset.sounds : [] }),
+	        _react2.default.createElement(_PanContainer2.default, { sounds: currentPreset.sounds ? currentPreset.sounds : [], db: db }),
 	        _react2.default.createElement(_ProceedButtons2.default, { onClickSave: this.onClickSave, saveEnabled: canBeSaved }),
 	        _react2.default.createElement(_PlayersContainer2.default, { sounds: db.sounds })
 	      );
@@ -751,9 +751,6 @@
 	var queueIndex = -1;
 	
 	function cleanUpNextTick() {
-	    if (!draining || !currentQueue) {
-	        return;
-	    }
 	    draining = false;
 	    if (currentQueue.length) {
 	        queue = currentQueue.concat(queue);
@@ -4290,6 +4287,12 @@
 	
 	var _Pan2 = _interopRequireDefault(_Pan);
 	
+	var _dbhelpers = __webpack_require__(54);
+	
+	var helpers = _interopRequireWildcard(_dbhelpers);
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -4302,15 +4305,42 @@
 	  _inherits(PanContainer, _React$Component);
 	
 	  function PanContainer() {
+	    var _Object$getPrototypeO;
+	
+	    var _temp, _this, _ret;
+	
 	    _classCallCheck(this, PanContainer);
 	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(PanContainer).apply(this, arguments));
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+	
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(PanContainer)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.getSoundPaletteIds = function () {
+	      var _this$props = _this.props;
+	      var sounds = _this$props.sounds;
+	      var db = _this$props.db;
+	
+	      var soundIds = [];
+	      var panSounds = sounds.slice();
+	      if (panSounds.length) {
+	        var ding = panSounds.shift();
+	        var dingId = helpers.getSoundByName(db, ding).id;
+	        soundIds = panSounds.map(function (s) {
+	          return helpers.getSoundByName(db, s, true).id;
+	        });
+	        soundIds.unshift(dingId);
+	      }
+	      return soundIds;
+	    }, _temp), _possibleConstructorReturn(_this, _ret);
 	  }
 	
 	  _createClass(PanContainer, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement(_Pan2.default, { sounds: this.props.sounds });
+	
+	      var sounds = this.getSoundPaletteIds();
+	
+	      return _react2.default.createElement(_Pan2.default, { sounds: sounds });
 	    }
 	  }]);
 	
@@ -4337,6 +4367,12 @@
 	
 	var _Note2 = _interopRequireDefault(_Note);
 	
+	var _dbhelpers = __webpack_require__(54);
+	
+	var helpers = _interopRequireWildcard(_dbhelpers);
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var Pan = function Pan(props) {
@@ -4355,11 +4391,17 @@
 	      _react2.default.createElement('circle', { className: 'cls-3', cx: '413.75', cy: '413.75', r: '411.25' }),
 	      _react2.default.createElement(
 	        'g',
-	        { className: 'group-1' },
+	        {
+	          className: 'group-1',
+	          onMouseEnter: function onMouseEnter(event) {
+	            return helpers.playSound(props.sounds[0]);
+	          },
+	          onTouchStart: function onTouchStart(event) {
+	            return helpers.playSound(props.sounds[0]);
+	          } },
 	        _react2.default.createElement('path', { className: 'cls-2', d: 'M413.75 292.52a121.23 121.23 0 1 1-85.72 35.51 120.44 120.44 0 0 1 85.72-35.51m0-2a123.23 123.23 0 1 0 123.23 123.23 123.23 123.23 0 0 0-123.23-123.23z' }),
 	        _react2.default.createElement('circle', { className: 'cls-2 fake', cx: '500', cy: '500', r: '41.81', transform: 'rotate(-89.88 413.642 500.087)' }),
 	        _react2.default.createElement(_Note2.default, {
-	          sound: props.sounds[0],
 	          number: 1,
 	          cx: '500',
 	          cy: '500',
@@ -4535,14 +4577,16 @@
 	};
 	
 	var getSoundByName = function getSoundByName(db, soundName) {
+	  var noDings = arguments.length <= 2 || arguments[2] === undefined ? false : arguments[2];
+	
 	  return db.sounds.filter(function (sound) {
-	    return sound.name === soundName;
+	    return sound.name === soundName && (!noDings || ! ~sound.id.indexOf('d'));
 	  })[0];
 	};
 	
-	var playSound = function playSound(sound) {
+	var playSound = function playSound(soundId) {
 	  //kinda anti-pattern, but this is more transparent.
-	  var player = document.getElementById('player-' + sound);
+	  var player = document.getElementById('player-' + soundId);
 	  var soundPlayed = false;
 	  if (!soundPlayed) {
 	    soundPlayed = true;
@@ -4676,7 +4720,7 @@
 	        for (var _iterator = currentSounds[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
 	          var sound = _step.value;
 	
-	          var soundObj = helpers.getSoundByName(db, sound);
+	          var soundObj = helpers.getSoundByName(db, sound, true);
 	          soundsInPreset.push({
 	            name: soundObj.name,
 	            hint: soundObj.hint,
@@ -4707,7 +4751,12 @@
 	      var forbidden = _this.chosenNotes,
 	          sounds = allsounds.slice();
 	
-	      if (! ~forbidden.indexOf(ding)) forbidden.push(ding);
+	      var dings = sounds.filter(function (s) {
+	        return s.id.includes('d');
+	      }).map(function (s) {
+	        return s.name;
+	      });
+	      forbidden = forbidden.concat(dings);
 	      //removing all forbidden sounds from allSounds array.
 	      var _iteratorNormalCompletion2 = true;
 	      var _didIteratorError2 = false;
@@ -4829,6 +4878,9 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.default = undefined;
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	var _react = __webpack_require__(19);
 	
@@ -4850,69 +4902,90 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var PresetPalette = function PresetPalette(props) {
-	  var preset = props.preset;
-	  var currentSounds = props.currentSounds;
-	  var allSounds = props.allSounds;
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'palette-body' },
-	    currentSounds.map(function (sound, gIndex) {
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var PresetPalette = function (_React$Component) {
+	  _inherits(PresetPalette, _React$Component);
+	
+	  function PresetPalette() {
+	    _classCallCheck(this, PresetPalette);
+	
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(PresetPalette).apply(this, arguments));
+	  }
+	
+	  _createClass(PresetPalette, [{
+	    key: 'render',
+	    value: function render() {
+	      var _props = this.props;
+	      var preset = _props.preset;
+	      var currentSounds = _props.currentSounds;
+	      var allSounds = _props.allSounds;
+	      var chooseNote = _props.chooseNote;
+	
 	      return _react2.default.createElement(
 	        'div',
-	        { key: 's' + (gIndex + 1), className: 'palette-sound' },
-	        _react2.default.createElement(
-	          'svg',
-	          { className: 'palette-note', viewBox: '0 0 88.62 88.62' },
-	          _react2.default.createElement(_Note2.default, { number: gIndex + 2, outerCircle: false })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'note-dropdown-wrapper' },
-	          _react2.default.createElement(
-	            'button',
-	            {
-	              className: 'note-dropdown ' + (sound.isDuplicate ? 'duplicate' : ''),
-	              id: "noteDropdown-" + gIndex + 1,
-	              type: 'button',
-	              'data-toggle': 'dropdown',
-	              'aria-haspopup': 'true',
-	              'aria-expanded': 'false'
-	            },
-	            sound.name + ' (' + sound.hint + ')',
-	            _react2.default.createElement('span', { className: 'caret' })
-	          ),
-	          _react2.default.createElement(
+	        { className: 'palette-body' },
+	        currentSounds.map(function (sound, gIndex) {
+	          return _react2.default.createElement(
 	            'div',
-	            { className: "dropdown-menu note-dropdown" + (gIndex + 1 < 5 ? ' upper' : ''), 'aria-labelledby': "noteDropdown-" + gIndex + 1 },
-	            allSounds.map(function (gSound, index) {
-	              return _react2.default.createElement(
-	                'div',
+	            { key: 's' + (gIndex + 1), className: 'palette-sound' },
+	            _react2.default.createElement(
+	              'svg',
+	              { className: 'palette-note', viewBox: '0 0 88.62 88.62' },
+	              _react2.default.createElement(_Note2.default, { number: gIndex + 2, outerCircle: false })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'note-dropdown-wrapper' },
+	              _react2.default.createElement(
+	                'button',
 	                {
-	                  className: 'dropdown-menu_note-item',
-	                  key: 'gs-' + index,
-	                  onMouseEnter: function onMouseEnter(event) {
-	                    return helpers.playSound(gSound.name);
-	                  },
-	                  onMouseLeave: function onMouseLeave(event) {
-	                    return helpers.stopSound(gSound.name);
-	                  },
-	                  onClick: function onClick(event) {
-	                    props.chooseNote(gSound, gIndex + 1);
-	                  } },
-	                gSound.name + ' (' + gSound.hint + ')'
-	              );
-	            })
-	          )
-	        )
+	                  className: 'note-dropdown ' + (sound.isDuplicate ? 'duplicate' : ''),
+	                  id: "noteDropdown-" + gIndex + 1,
+	                  type: 'button',
+	                  'data-toggle': 'dropdown',
+	                  'aria-haspopup': 'true',
+	                  'aria-expanded': 'false'
+	                },
+	                sound.name + ' (' + sound.hint + ')',
+	                _react2.default.createElement('span', { className: 'caret' })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: "dropdown-menu note-dropdown" + (gIndex + 1 < 5 ? ' upper' : ''), 'aria-labelledby': "noteDropdown-" + gIndex + 1 },
+	                _react2.default.createElement('div', { className: 'dropdown-close' }),
+	                allSounds.map(function (gSound, index) {
+	                  return _react2.default.createElement(
+	                    'div',
+	                    {
+	                      className: 'dropdown-menu_note-item ' + (gSound.name === sound.name ? 'active' : ''),
+	                      key: 'gs-' + index,
+	                      onMouseEnter: function onMouseEnter(event) {
+	                        return helpers.playSound(gSound.id);
+	                      },
+	                      onMouseLeave: function onMouseLeave(event) {
+	                        return helpers.stopSound(gSound.id);
+	                      },
+	                      onClick: function onClick(event) {
+	                        chooseNote(gSound, gIndex + 1);
+	                      } },
+	                    gSound.name + ' (' + gSound.hint + ')'
+	                  );
+	                })
+	              )
+	            )
+	          );
+	        })
 	      );
-	    })
-	  );
-	};
+	    }
+	  }]);
 	
-	PresetPalette.propTypes = {};
-	PresetPalette.defaultProps = {};
+	  return PresetPalette;
+	}(_react2.default.Component);
 	
 	exports.default = PresetPalette;
 
@@ -4920,7 +4993,7 @@
 /* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(jQuery) {/* ========================================================================
+	/* WEBPACK VAR INJECTION */(function($) {/* ========================================================================
 	 * Bootstrap: dropdown.js v3.3.6
 	 * http://getbootstrap.com/javascript/#dropdowns
 	 * ========================================================================
@@ -4929,8 +5002,7 @@
 	 * ======================================================================== */
 	
 	
-	+function ($) {
-	  'use strict';
+	'use strict';
 	
 	  // DROPDOWN CLASS DEFINITION
 	  // =========================
@@ -5084,8 +5156,7 @@
 	    .on('keydown.bs.dropdown.data-api', toggle, Dropdown.prototype.keydown)
 	    .on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
 	
-	}(jQuery);
-	
+	module.exports = {Dropdown}
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(58)))
 
 /***/ },
@@ -15001,6 +15072,7 @@
 	            return _react2.default.createElement(
 	              'li',
 	              {
+	                className: preset.id == 'p0' ? 'disabled' : '',
 	                key: preset.id,
 	                onClick: function onClick(event) {
 	                  return props.choosePresetOption(preset.id);
@@ -16762,12 +16834,17 @@
 	
 	var saveCustomPreset = function saveCustomPreset(db, currentPreset) {
 	  return function (dispatch) {
-	    currentPreset.name = 'Мой';
-	    // if custom preset in db, remove
-	    var customPresetDbIndex = db.presets.indexOf(helpers.getPresetByName(db, 'Мой'));
-	    if (~customPresetDbIndex) db.presets.splice(customPresetDbIndex, 1);
+	    if (currentPreset.name == '--') {
+	      currentPreset.name = 'Мой';
+	      // if custom preset in db, remove
+	      var customPresetDbIndex = db.presets.indexOf(helpers.getPresetByName(db, 'Мой'));
+	      if (~customPresetDbIndex) db.presets.splice(customPresetDbIndex, 1);
+	    }
+	
 	    // add current custom preset to db
-	    db.presets.unshift(currentPreset);
+	    if (!db.presets.find(function (p) {
+	      return p.id == currentPreset.id;
+	    })) db.presets.unshift(currentPreset);
 	    dispatch(savePreset(currentPreset));
 	  };
 	};
@@ -16885,10 +16962,10 @@
 	    { className: 'playersContainer' },
 	    props.sounds.map(function (sound) {
 	      return _react2.default.createElement('audio', {
-	        key: 'player--' + sound.name,
-	        id: 'player-' + sound.name,
+	        key: 'player--' + sound.id,
+	        id: 'player-' + sound.id,
 	        preload: 'auto',
-	        src: encodeURIComponent('sounds/' + sound.name + '.mp3') });
+	        src: encodeURIComponent('sounds/' + sound.id + '.mp3') });
 	    })
 	  );
 	};
@@ -33367,22 +33444,9 @@
 	  customPreset: { id: 'pCustom', name: 'Мой', sounds: [] },
 	  canBeSaved: true,
 	  db: {
-	    presets: [{ id: 'p1', name: '№1', sounds: ["C#3", "G#3", "A3", "C#4", "Eb4", "E4", "F#4", "G#4", "B4"] }, { id: 'p2', name: '№2', sounds: ["C#3", "G#3", "B3", "C#4", "D#4", "E4", "F#4", "G#4", "B4"] }, { id: 'p3', name: '№3', sounds: ["D3", "A3", "Bb3", "C4", "D4", "E4", "F4", "G4", "A4"] }, { id: 'p4', name: '№4', sounds: ["D3", "A3", "Bb3", "D4", "E4", "F4", "G4", "A4", "C5"] }, { id: 'p5', name: '№5', sounds: ["D3", "A3", "C4", "D4", "E4", "F4", "G4", "A4", "C5"] }, { id: 'p6', name: '№6', sounds: ["D3", "A3", "C4", "D4", "F4", "G4", "A4", "C5", "D5"] }, { id: 'p7', name: '№7', sounds: ["D3", "G3", "A3", "B3", "D4", "E4", "F#4", "G4", "A4"] }, { id: 'p8', name: '№8', sounds: ["E3", "G3", "B3", "C4", "D4", "E4", "F#4", "G4", "B4"] }, { id: 'p9', name: '№9', sounds: ["F3", "C4", "Db4", "Eb4", "F4", "G4", "Ab4", "C5", "C#5"] }, { id: 'p10', name: '№10', sounds: ["F#3", "B3", "C#4", "D4", "E4", "F#4", "G4", "B4", "C#5"] }, { id: 'p11', name: '№11', sounds: ['G3', 'C4', 'D4', 'Eb4', 'F4', 'G4', 'Ab4', 'B4', 'C5'] }],
-	    sounds: [
-	
-	    // TODO:
-	    // есть в пресетах, но нет в декларации
-	    // {id:'', name:'Ab4', hint:''},
-	    // {id:'', name:'D#4', hint:''},
-	    // {id:'', name:'Db4', hint:''},
-	    // есть в декларации, но нет в пресете
-	    // Eb5 (ми-бем.)
-	    // лишняя нота в пресете
-	    // {id: 'p11', name: '№11', sounds:['G3','C4','D4','Eb4','F4','G4','Ab4','B4','C5','D5']},
-	
-	    { id: '1d', name: 'C#3', hint: 'до-ди.' }, { id: '2d', name: 'D3', hint: 'ре' }, { id: '3d', name: 'E3', hint: 'ми' }, { id: '4d', name: 'F3', hint: 'фа' }, { id: '5d', name: 'F#3', hint: 'фа-ди.' }, { id: '6d', name: 'G3', hint: 'соль' }, { id: '1s', name: 'G3', hint: 'соль' }, { id: '2s', name: 'G#3', hint: 'соль-ди.' }, { id: '3s', name: 'A3', hint: 'ля' }, { id: '4s', name: 'Bb3', hint: 'си-бем.' }, { id: '5s', name: 'B3', hint: 'си' }, { id: '6s', name: 'C4', hint: 'до' }, { id: '7s', name: 'C#4', hint: 'до-ди.' }, { id: '8s', name: 'D4', hint: 'ре' }, { id: '9s', name: 'Eb4', hint: 'ми-бем.' }, { id: '10s', name: 'E4', hint: 'ми' }, { id: '11s', name: 'F4', hint: 'фа' }, { id: '12s', name: 'F#4', hint: 'фа-ди.' }, { id: '13s', name: 'G4', hint: 'соль' }, { id: '14s', name: 'G#4', hint: 'соль-ди.' }, { id: '15s', name: 'A4', hint: 'ля' }, { id: '16s', name: 'B4', hint: 'си' }, { id: '17s', name: 'C5', hint: 'до' }, { id: '18s', name: 'C#5', hint: 'до-ди.' }, { id: '19s', name: 'D5', hint: 'ре' },
-	    // ?
-	    { id: '20s', name: 'Ab4', hint: '?' }, { id: '21s', name: 'D#4', hint: '?' }, { id: '22s', name: 'Db4', hint: '?' }]
+	    presets: [{ id: 'p0', name: 'Мой' }, //fake
+	    { id: 'p1', name: '№1', sounds: ["C#3", "G#3", "A3", "C#4", "Eb4", "E4", "F#4", "G#4", "B4"] }, { id: 'p2', name: '№2', sounds: ["C#3", "G#3", "B3", "C#4", "Eb4", "E4", "F#4", "G#4", "B4"] }, { id: 'p3', name: '№3', sounds: ["D3", "A3", "Bb3", "C4", "D4", "E4", "F4", "G4", "A4"] }, { id: 'p4', name: '№4', sounds: ["D3", "A3", "Bb3", "D4", "E4", "F4", "G4", "A4", "C5"] }, { id: 'p5', name: '№5', sounds: ["D3", "A3", "C4", "D4", "E4", "F4", "G4", "A4", "C5"] }, { id: 'p6', name: '№6', sounds: ["D3", "A3", "C4", "D4", "F4", "G4", "A4", "C5", "D5"] }, { id: 'p7', name: '№7', sounds: ["D3", "G3", "A3", "B3", "D4", "E4", "F#4", "G4", "A4"] }, { id: 'p8', name: '№8', sounds: ["E3", "G3", "B3", "C4", "D4", "E4", "F#4", "G4", "B4"] }, { id: 'p9', name: '№9', sounds: ["F3", "C4", "C#4", "Eb4", "F4", "G4", "G#4", "C5", "C#5"] }, { id: 'p10', name: '№10', sounds: ['G3', 'C4', 'D4', 'Eb4', 'F4', 'G4', 'G#4', 'B4', 'C5'] }],
+	    sounds: [{ id: 'd1', name: 'C#3', hint: 'до-ди.' }, { id: 'd2', name: 'D3', hint: 'ре' }, { id: 'd3', name: 'E3', hint: 'ми' }, { id: 'd4', name: 'F3', hint: 'фа' }, { id: 'd5', name: 'G3', hint: 'соль' }, { id: 's1', name: 'G3', hint: 'соль' }, { id: 's2', name: 'G#3', hint: 'соль-ди.' }, { id: 's3', name: 'A3', hint: 'ля' }, { id: 's4', name: 'Bb3', hint: 'си-бем.' }, { id: 's5', name: 'B3', hint: 'си' }, { id: 's6', name: 'C4', hint: 'до' }, { id: 's7', name: 'C#4', hint: 'до-ди.' }, { id: 's8', name: 'D4', hint: 'ре' }, { id: 's9', name: 'Eb4', hint: 'ми-бем.' }, { id: 's10', name: 'E4', hint: 'ми' }, { id: 's11', name: 'F4', hint: 'фа' }, { id: 's12', name: 'F#4', hint: 'фа-ди.' }, { id: 's13', name: 'G4', hint: 'соль' }, { id: 's14', name: 'G#4', hint: 'соль-ди.' }, { id: 's15', name: 'A4', hint: 'ля' }, { id: 's16', name: 'B4', hint: 'си' }, { id: 's17', name: 'C5', hint: 'до' }, { id: 's18', name: 'C#5', hint: 'до-ди.' }, { id: 's19', name: 'D5', hint: 'ре' }, { id: 's20', name: 'Eb5', hint: 'ми-бем.' }]
 	  }
 	};
 	
@@ -33404,6 +33468,7 @@
 	        canBeSaved: action.savingState
 	      });
 	    case "SAVE_CUSTOM_PRESET":
+	      //TODO: write to local storage
 	      return Object.assign({}, state, {
 	        customPreset: action.preset
 	      });
@@ -33417,38 +33482,31 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./samples-piano/A3.mp3": 226,
-		"./samples-piano/A4.mp3": 227,
-		"./samples-piano/Ab4.mp3": 228,
-		"./samples-piano/B3.mp3": 229,
-		"./samples-piano/B4.mp3": 230,
-		"./samples-piano/Bb3.mp3": 231,
-		"./samples-piano/Bb4.mp3": 232,
-		"./samples-piano/C#3.mp3": 233,
-		"./samples-piano/C#4.mp3": 234,
-		"./samples-piano/C#5.mp3": 235,
-		"./samples-piano/C4.mp3": 236,
-		"./samples-piano/C5.mp3": 237,
-		"./samples-piano/D#4.mp3": 238,
-		"./samples-piano/D3.mp3": 239,
-		"./samples-piano/D4.mp3": 240,
-		"./samples-piano/D5.mp3": 241,
-		"./samples-piano/Db4.mp3": 242,
-		"./samples-piano/E3.mp3": 243,
-		"./samples-piano/E4.mp3": 244,
-		"./samples-piano/E5.mp3": 245,
-		"./samples-piano/Eb3.mp3": 246,
-		"./samples-piano/Eb4.mp3": 247,
-		"./samples-piano/Eb5.mp3": 248,
-		"./samples-piano/F#3.mp3": 249,
-		"./samples-piano/F#4.mp3": 250,
-		"./samples-piano/F3.mp3": 251,
-		"./samples-piano/F4.mp3": 252,
-		"./samples-piano/G#3.mp3": 253,
-		"./samples-piano/G#4.mp3": 254,
-		"./samples-piano/G3.mp3": 255,
-		"./samples-piano/G4.mp3": 256,
-		"./samples-piano/С3.mp3": 257
+		"./d1.mp3": 226,
+		"./d2.mp3": 227,
+		"./d3.mp3": 228,
+		"./d4.mp3": 229,
+		"./d5.mp3": 230,
+		"./s1.mp3": 231,
+		"./s10.mp3": 232,
+		"./s11.mp3": 233,
+		"./s12.mp3": 234,
+		"./s13.mp3": 235,
+		"./s14.mp3": 236,
+		"./s15.mp3": 237,
+		"./s16.mp3": 238,
+		"./s17.mp3": 239,
+		"./s18.mp3": 240,
+		"./s19.mp3": 241,
+		"./s2.mp3": 242,
+		"./s20.mp3": 243,
+		"./s3.mp3": 244,
+		"./s4.mp3": 245,
+		"./s5.mp3": 246,
+		"./s6.mp3": 247,
+		"./s7.mp3": 248,
+		"./s8.mp3": 249,
+		"./s9.mp3": 250
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -33468,193 +33526,151 @@
 /* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/A3.mp3";
+	module.exports = __webpack_require__.p + "sounds/d1.mp3";
 
 /***/ },
 /* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/A4.mp3";
+	module.exports = __webpack_require__.p + "sounds/d2.mp3";
 
 /***/ },
 /* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/Ab4.mp3";
+	module.exports = __webpack_require__.p + "sounds/d3.mp3";
 
 /***/ },
 /* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/B3.mp3";
+	module.exports = __webpack_require__.p + "sounds/d4.mp3";
 
 /***/ },
 /* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/B4.mp3";
+	module.exports = __webpack_require__.p + "sounds/d5.mp3";
 
 /***/ },
 /* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/Bb3.mp3";
+	module.exports = __webpack_require__.p + "sounds/s1.mp3";
 
 /***/ },
 /* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/Bb4.mp3";
+	module.exports = __webpack_require__.p + "sounds/s10.mp3";
 
 /***/ },
 /* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/C#3.mp3";
+	module.exports = __webpack_require__.p + "sounds/s11.mp3";
 
 /***/ },
 /* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/C#4.mp3";
+	module.exports = __webpack_require__.p + "sounds/s12.mp3";
 
 /***/ },
 /* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/C#5.mp3";
+	module.exports = __webpack_require__.p + "sounds/s13.mp3";
 
 /***/ },
 /* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/C4.mp3";
+	module.exports = __webpack_require__.p + "sounds/s14.mp3";
 
 /***/ },
 /* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/C5.mp3";
+	module.exports = __webpack_require__.p + "sounds/s15.mp3";
 
 /***/ },
 /* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/D#4.mp3";
+	module.exports = __webpack_require__.p + "sounds/s16.mp3";
 
 /***/ },
 /* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/D3.mp3";
+	module.exports = __webpack_require__.p + "sounds/s17.mp3";
 
 /***/ },
 /* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/D4.mp3";
+	module.exports = __webpack_require__.p + "sounds/s18.mp3";
 
 /***/ },
 /* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/D5.mp3";
+	module.exports = __webpack_require__.p + "sounds/s19.mp3";
 
 /***/ },
 /* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/Db4.mp3";
+	module.exports = __webpack_require__.p + "sounds/s2.mp3";
 
 /***/ },
 /* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/E3.mp3";
+	module.exports = __webpack_require__.p + "sounds/s20.mp3";
 
 /***/ },
 /* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/E4.mp3";
+	module.exports = __webpack_require__.p + "sounds/s3.mp3";
 
 /***/ },
 /* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/E5.mp3";
+	module.exports = __webpack_require__.p + "sounds/s4.mp3";
 
 /***/ },
 /* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/Eb3.mp3";
+	module.exports = __webpack_require__.p + "sounds/s5.mp3";
 
 /***/ },
 /* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/Eb4.mp3";
+	module.exports = __webpack_require__.p + "sounds/s6.mp3";
 
 /***/ },
 /* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/Eb5.mp3";
+	module.exports = __webpack_require__.p + "sounds/s7.mp3";
 
 /***/ },
 /* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/F#3.mp3";
+	module.exports = __webpack_require__.p + "sounds/s8.mp3";
 
 /***/ },
 /* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "sounds/F#4.mp3";
-
-/***/ },
-/* 251 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "sounds/F3.mp3";
-
-/***/ },
-/* 252 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "sounds/F4.mp3";
-
-/***/ },
-/* 253 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "sounds/G#3.mp3";
-
-/***/ },
-/* 254 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "sounds/G#4.mp3";
-
-/***/ },
-/* 255 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "sounds/G3.mp3";
-
-/***/ },
-/* 256 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "sounds/G4.mp3";
-
-/***/ },
-/* 257 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "sounds/С3.mp3";
+	module.exports = __webpack_require__.p + "sounds/s9.mp3";
 
 /***/ }
 /******/ ]);
