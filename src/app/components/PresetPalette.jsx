@@ -29,7 +29,7 @@ const PresetPalette = (props) => {
               <div className={"dropdown-menu note-dropdown" + (gIndex + 1 < 5 ? ' upper' : '')} aria-labelledby={"noteDropdown-"+ gIndex+1}>
                 {allSounds.map(function(gSound, index) {
                   return <div
-                    className='dropdown-menu_note-item' 
+                    className={'dropdown-menu_note-item ' + (gSound.name === sound.name ? 'active' : '')} 
                     key={'gs-'+index}
                     onMouseEnter={(event) => helpers.playSound(gSound.id)}
                     onMouseLeave={(event) => helpers.stopSound(gSound.id)}
