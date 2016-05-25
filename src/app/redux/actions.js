@@ -10,12 +10,15 @@ const chooseCurrentPreset = (db, presetId) => {
 
 const saveCustomPreset = (db, currentPreset) => {
   return (dispatch) => {
-    currentPreset.name = 'Мой'
-    // if custom preset in db, remove
-    let customPresetDbIndex = db.presets.indexOf(helpers.getPresetByName(db, 'Мой'));
-    if (~customPresetDbIndex) db.presets.splice(customPresetDbIndex, 1);
+    if (currentPreset.name == '--'){ 
+      currentPreset.name = 'Мой';
+      // if custom preset in db, remove
+      let customPresetDbIndex = db.presets.indexOf(helpers.getPresetByName(db, 'Мой'));
+      if (~customPresetDbIndex) db.presets.splice(customPresetDbIndex, 1);
+    }
+
     // add current custom preset to db
-    db.presets.unshift(currentPreset);
+    if(!db.presets.find(p => p.id == currentPreset.id)) db.presets.unshift(currentPreset);
     dispatch(savePreset(currentPreset));
   }
 }

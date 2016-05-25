@@ -7,7 +7,7 @@ import * as helpers from '../redux/dbhelpers.js'
 export default class PresetPalette extends React.Component {
 
   render(){
-    const {preset, currentSounds, allSounds} = this.props;
+    const {preset, currentSounds, allSounds, chooseNote} = this.props;
     return (
       <div className='palette-body'>
         {currentSounds.map(function(sound, gIndex) {
@@ -20,7 +20,6 @@ export default class PresetPalette extends React.Component {
                 <button 
                   className={'note-dropdown ' + (sound.isDuplicate ? 'duplicate' : '')} 
                   id={"noteDropdown-"+ gIndex+1} 
-                  ref={"dd_"+ gIndex+1} 
                   type="button" 
                   data-toggle="dropdown" 
                   aria-haspopup="true" 
@@ -30,9 +29,7 @@ export default class PresetPalette extends React.Component {
                   <span className="caret"></span>
                 </button>
                 <div className={"dropdown-menu note-dropdown" + (gIndex + 1 < 5 ? ' upper' : '')} aria-labelledby={"noteDropdown-"+ gIndex+1}>
-                  <div 
-                    className='dropdown-close' 
-                    onClick ={event => this.refs[`dd_${gIndex+1}`].toggle()}/>
+                  <div className='dropdown-close' />
                   {allSounds.map(function(gSound, index) {
                     return <div
                       className={'dropdown-menu_note-item ' + (gSound.name === sound.name ? 'active' : '')} 
@@ -40,7 +37,7 @@ export default class PresetPalette extends React.Component {
                       onMouseEnter={(event) => helpers.playSound(gSound.id)}
                       onMouseLeave={(event) => helpers.stopSound(gSound.id)}
                       onClick={(event) => {
-                        props.chooseNote(gSound, gIndex + 1)}
+                        chooseNote(gSound, gIndex + 1)}
                       }>
                         {gSound.name +' ('+ gSound.hint +')'}
                       </div>;

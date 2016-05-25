@@ -20,7 +20,8 @@ const PresetPaletteHeader = (props) => {
           </button>
           <ul className="dropdown-menu" aria-labelledby="presetDropdown">
             {presetsList.map(function(preset) {
-              return <li 
+              return <li
+                className = {preset.id == 'p0' ? 'disabled' : ''} 
                 key={preset.id}
                 onClick={(event) => props.choosePresetOption(preset.id)}>
                   {preset.name}
