@@ -94,7 +94,8 @@ export default class PresetContainer extends React.Component {
     let forbidden = this.chosenNotes,
         sounds = allsounds.slice();
 
-    if (!( ~forbidden.indexOf(ding))) forbidden.push(ding);
+    let dings = sounds.filter(s =>  s.id.includes('d')).map(s => s.name);
+    forbidden = forbidden.concat(dings);
     //removing all forbidden sounds from allSounds array.
     for (let sound of forbidden) {
       let index = sounds.indexOf(helpers.getSoundByName(db, sound));
