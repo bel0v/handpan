@@ -129,7 +129,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'neucharegular';\n  src: url(" + __webpack_require__(8) + ") format(\"woff2\"), url(" + __webpack_require__(9) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'andikaregular';\n  src: url(" + __webpack_require__(10) + ") format(\"woff2\"), url(" + __webpack_require__(11) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal; }\n\n@keyframes shake {\n  10%, 90% {\n    transform: translate3d(-1px, 0, 0); }\n  20%, 80% {\n    transform: translate3d(2px, 0, 0); }\n  30%, 50%, 70% {\n    transform: translate3d(-4px, 0, 0); }\n  40%, 60% {\n    transform: translate3d(4px, 0, 0); } }\n\n@-webkit-keyframes shake {\n  10%, 90% {\n    transform: translate3d(-1px, 0, 0); }\n  20%, 80% {\n    transform: translate3d(2px, 0, 0); }\n  30%, 50%, 70% {\n    transform: translate3d(-4px, 0, 0); }\n  40%, 60% {\n    transform: translate3d(4px, 0, 0); } }\n\n.mainPan {\n  width: 400px; }\n\n.cls-1, .cls-2, .cls-3, .cls-4 {\n  fill: transparent;\n  stroke-miterlimit: 10; }\n\n.cls-1, .cls-3 {\n  stroke: #667893; }\n\n.cls-1 {\n  stroke-width: 2px; }\n\n.cls-2 {\n  stroke: #667893; }\n  .cls-2.fake {\n    stroke: transparent;\n    stroke-width: 160px; }\n\n.cls-3, .cls-4 {\n  stroke-width: 4px; }\n\n.cls-4 {\n  stroke: #b2c7e7;\n  transition: all ease-in 1.5s; }\n\n.cls-5 {\n  font-size: 41.66px;\n  fill: #b2c7e7;\n  font-family: neucharegular; }\n\n.mainPan g {\n  cursor: pointer; }\n\n.mainPan > g:hover > g circle, .mainPan > g:hover > g text, .mainPan .cls-2:hover + g circle, .mainPan .cls-2:hover + g text {\n  stroke: #e8ead9; }\n\n.mainPan > g:hover > g circle, .mainPan .cls-2:hover + g circle {\n  stroke-width: 6px;\n  transition: none; }\n\n.note-dropdown-wrapper.open + .palette-note {\n  background: red; }\n  .note-dropdown-wrapper.open + .palette-note circle, .note-dropdown-wrapper.open + .palette-note text {\n    stroke: #e8ead9; }\n  .note-dropdown-wrapper.open + .palette-note circle {\n    stroke-width: 6px;\n    transition: none; }\n\n.palette-header {\n  position: relative;\n  width: 100%;\n  padding-bottom: 50px; }\n  .palette-header-left, .palette-header-right, .palette-header-middle {\n    position: absolute;\n    color: #e8ead9; }\n  .palette-header-left, .palette-header-middle {\n    -webkit-user-select: none; }\n  .palette-header-left {\n    font-family: neucharegular;\n    right: 0;\n    margin-right: calc(50% + 90px);\n    margin-top: 10px; }\n  .palette-header-right {\n    font-size: 12px;\n    left: 0;\n    margin-left: calc(50% + 90px);\n    color: #c8cbbd; }\n  .palette-header-middle {\n    font-family: neucharegular;\n    left: 0;\n    right: 0;\n    margin: auto;\n    padding-top: 2px; }\n\n.palette-note {\n  width: 42px;\n  vertical-align: middle;\n  margin-right: 10px; }\n\n.note-icon {\n  width: 22px;\n  height: 22px;\n  display: inline-block;\n  background: url(" + __webpack_require__(12) + ");\n  vertical-align: middle;\n  background-repeat: no-repeat;\n  margin-right: 5px; }\n\n.arrow-svg {\n  fill: #79a4d2; }\n  .arrow-svg:hover {\n    fill: #e8ead9; }\n\n.arrow-icon {\n  width: 10px;\n  height: 19px;\n  background: url(" + __webpack_require__(13) + ");\n  display: inline-block;\n  vertical-align: middle;\n  background-repeat: no-repeat; }\n  .arrow-icon.left {\n    transform: scaleX(-1);\n    margin-right: 10px; }\n  .arrow-icon.right {\n    margin-left: 10px; }\n  .arrow-icon:hover {\n    -webkit-filter: brightness(180%);\n    filter: brightness(180%); }\n\n.preset-dropdown-wrapper {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle; }\n\nul.dropdown-menu {\n  transform: translateX(-50%);\n  left: 50%;\n  color: #605d6e; }\n  ul.dropdown-menu[aria-labelledby='presetDropdown'] {\n    margin-top: 0;\n    min-width: 73px; }\n  ul.dropdown-menu li {\n    cursor: pointer;\n    height: 34px;\n    line-height: 34px;\n    font-size: 16px;\n    padding-left: 15px; }\n    ul.dropdown-menu li:hover {\n      background: #967b73;\n      color: #e8ead9; }\n    ul.dropdown-menu li.disabled {\n      pointer-events: none;\n      color: #a6a6a6; }\n\n.note-dropdown-wrapper {\n  margin-top: 20px;\n  min-width: 115px; }\n  .note-dropdown-wrapper button.note-dropdown {\n    padding-top: 10px;\n    padding-bottom: 10px;\n    padding-right: 12px;\n    border-radius: 4px;\n    border: 1px solid #967b73;\n    background: #c8cbbd; }\n    .note-dropdown-wrapper button.note-dropdown.duplicate {\n      background: #e5fd8b;\n      animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }\n    .note-dropdown-wrapper button.note-dropdown:hover, .note-dropdown-wrapper button.note-dropdown:active, .note-dropdown-wrapper button.note-dropdown:focus {\n      background: #967b73;\n      color: #e8ead9; }\n    .note-dropdown-wrapper button.note-dropdown:active, .note-dropdown-wrapper button.note-dropdown:focus {\n      outline: none; }\n\n.note-dropdown-wrapper.open .dropdown-menu {\n  display: flex; }\n\n.note-dropdown-wrapper.open .dropdown-menu.note-dropdown {\n  top: calc(100% - 85px);\n  flex-wrap: wrap;\n  left: 0;\n  right: 0;\n  padding: 25px;\n  background: #e8ead9;\n  border-radius: 10px;\n  -webkit-box-shadow: none;\n  -moz-box-shadow: none;\n  box-shadow: none; }\n  .note-dropdown-wrapper.open .dropdown-menu.note-dropdown.upper {\n    top: calc(0% + 163px); }\n\n.note-dropdown-wrapper.open .dropdown-menu_note-item {\n  cursor: pointer;\n  text-align: center;\n  flex: 13%;\n  max-width: 100px;\n  padding: 12px;\n  border-radius: 4px;\n  margin: 5px;\n  margin-bottom: 10px;\n  user-select: none; }\n  .note-dropdown-wrapper.open .dropdown-menu_note-item:hover, .note-dropdown-wrapper.open .dropdown-menu_note-item.active {\n    background: #967b73;\n    color: #e8ead9; }\n\n#presetDropdown {\n  text-align: left;\n  padding-left: 15px;\n  width: 73px;\n  height: 38px;\n  background: transparent;\n  color: #79a4d2;\n  border: 1px #c8cbbd solid;\n  border-radius: 4px; }\n  #presetDropdown .caret {\n    position: absolute;\n    color: #e8ead9;\n    top: 50%;\n    right: 15px;\n    transform: translateY(-50%); }\n  #presetDropdown:hover, #presetDropdown:active, #presetDropdown:focus {\n    color: #e8ead9;\n    border-color: #967b73; }\n    #presetDropdown:hover .caret, #presetDropdown:active .caret, #presetDropdown:focus .caret {\n      color: #967b73; }\n  #presetDropdown:active, #presetDropdown:focus {\n    outline: none; }\n\n.palette-body {\n  padding-top: 60px;\n  max-width: 860px;\n  margin: auto;\n  position: relative; }\n  .palette-body .palette-sound {\n    margin-bottom: 87px;\n    display: inline-block;\n    margin-left: 30px;\n    margin-right: 30px; }\n    .palette-body .palette-sound .palette-note {\n      margin-right: 0; }\n\n.dropdown-close {\n  position: absolute;\n  top: 14px;\n  right: 14px;\n  background: url(" + __webpack_require__(14) + ");\n  width: 16px;\n  height: 16px;\n  cursor: pointer; }\n\n.proceed-buttons {\n  margin-top: 70px;\n  margin-bottom: 70px; }\n  .proceed-buttons .long-btn {\n    position: relative;\n    width: 167px;\n    height: 38px;\n    border-radius: 2px;\n    text-transform: uppercase;\n    font-size: 10px;\n    border: none;\n    cursor: pointer;\n    letter-spacing: 3px; }\n    .proceed-buttons .long-btn:active, .proceed-buttons .long-btn:focus {\n      outline: none; }\n  .proceed-buttons .proceed-button-save {\n    background: #c8cbbd;\n    color: #605d6e;\n    margin-right: 30px; }\n    .proceed-buttons .proceed-button-save .save-hint {\n      position: absolute;\n      display: none;\n      letter-spacing: initial;\n      text-transform: none;\n      bottom: 110%;\n      left: 0;\n      font-size: 14px;\n      color: #e5fd8b; }\n    .proceed-buttons .proceed-button-save.disabled {\n      background: #c5c6c2; }\n      .proceed-buttons .proceed-button-save.disabled .save-hint {\n        display: block; }\n      .proceed-buttons .proceed-button-save.disabled:active .save-hint, .proceed-buttons .proceed-button-save.disabled:focus .save-hint {\n        animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }\n  .proceed-buttons .proceed-button-proceed {\n    background: #977c73;\n    color: #dce1e8;\n    margin-left: 30px; }\n\nbody {\n  background-color: #3c3c3c;\n  font-family: andikaregular, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.main-wrapper {\n  padding-top: 50px;\n  text-align: center; }\n\nbutton {\n  cursor: pointer; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n@font-face {\n  font-family: 'neucharegular';\n  src: url(" + __webpack_require__(8) + ") format(\"woff2\"), url(" + __webpack_require__(9) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal; }\n\n@font-face {\n  font-family: 'andikaregular';\n  src: url(" + __webpack_require__(10) + ") format(\"woff2\"), url(" + __webpack_require__(11) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal; }\n\n@keyframes shake {\n  10%, 90% {\n    transform: translate3d(-1px, 0, 0); }\n  20%, 80% {\n    transform: translate3d(2px, 0, 0); }\n  30%, 50%, 70% {\n    transform: translate3d(-4px, 0, 0); }\n  40%, 60% {\n    transform: translate3d(4px, 0, 0); } }\n\n@-webkit-keyframes shake {\n  10%, 90% {\n    transform: translate3d(-1px, 0, 0); }\n  20%, 80% {\n    transform: translate3d(2px, 0, 0); }\n  30%, 50%, 70% {\n    transform: translate3d(-4px, 0, 0); }\n  40%, 60% {\n    transform: translate3d(4px, 0, 0); } }\n\n.mainPan {\n  width: 400px; }\n\n.cls-1, .cls-2, .cls-3, .cls-4 {\n  fill: transparent;\n  stroke-miterlimit: 10; }\n\n.cls-1, .cls-3 {\n  stroke: #667893; }\n\n.cls-1 {\n  stroke-width: 2px; }\n\n.cls-2 {\n  stroke: #667893; }\n  .cls-2.fake {\n    stroke: transparent;\n    stroke-width: 160px; }\n\n.cls-3, .cls-4 {\n  stroke-width: 4px; }\n\n.cls-4 {\n  stroke: #b2c7e7;\n  transition: all ease-in 1.5s; }\n\n.cls-5 {\n  font-size: 41.66px;\n  fill: #b2c7e7;\n  font-family: neucharegular; }\n\n.mainPan g {\n  cursor: pointer; }\n\n.mainPan > g:hover > g circle, .mainPan > g:hover > g text, .mainPan .cls-2:hover + g circle, .mainPan .cls-2:hover + g text {\n  stroke: #e8ead9; }\n\n.mainPan > g:hover > g circle, .mainPan .cls-2:hover + g circle {\n  stroke-width: 6px;\n  transition: none; }\n\n.note-dropdown-wrapper.open + .palette-note {\n  background: red; }\n  .note-dropdown-wrapper.open + .palette-note circle, .note-dropdown-wrapper.open + .palette-note text {\n    stroke: #e8ead9; }\n  .note-dropdown-wrapper.open + .palette-note circle {\n    stroke-width: 6px;\n    transition: none; }\n\n.palette-header {\n  position: relative;\n  width: 100%;\n  padding-bottom: 50px; }\n  .palette-header-left, .palette-header-right, .palette-header-middle {\n    position: absolute;\n    color: #e8ead9; }\n  .palette-header-left, .palette-header-middle {\n    -webkit-user-select: none; }\n  .palette-header-left {\n    font-family: neucharegular;\n    right: 0;\n    margin-right: calc(50% + 90px);\n    margin-top: 10px; }\n  .palette-header-right {\n    font-size: 12px;\n    left: 0;\n    margin-left: calc(50% + 90px);\n    color: #c8cbbd; }\n  .palette-header-middle {\n    font-family: neucharegular;\n    left: 0;\n    right: 0;\n    margin: auto;\n    padding-top: 2px; }\n\n.palette-note {\n  width: 42px;\n  vertical-align: middle;\n  margin-right: 10px; }\n\n.note-icon {\n  width: 22px;\n  height: 22px;\n  display: inline-block;\n  background: url(" + __webpack_require__(12) + ");\n  vertical-align: middle;\n  background-repeat: no-repeat;\n  margin-right: 5px; }\n\n.arrow-svg {\n  fill: #79a4d2; }\n  .arrow-svg:hover {\n    fill: #e8ead9; }\n\n.arrow-icon {\n  width: 10px;\n  height: 19px;\n  background: url(" + __webpack_require__(13) + ");\n  display: inline-block;\n  vertical-align: middle;\n  background-repeat: no-repeat; }\n  .arrow-icon.left {\n    transform: scaleX(-1);\n    margin-right: 10px; }\n  .arrow-icon.right {\n    margin-left: 10px; }\n  .arrow-icon:hover {\n    -webkit-filter: brightness(180%);\n    filter: brightness(180%); }\n\n.preset-dropdown-wrapper {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle; }\n\nul.dropdown-menu {\n  transform: translateX(-50%);\n  left: 50%;\n  color: #605d6e; }\n  ul.dropdown-menu[aria-labelledby='presetDropdown'] {\n    margin-top: 0;\n    min-width: 73px; }\n  ul.dropdown-menu li {\n    cursor: pointer;\n    height: 34px;\n    line-height: 34px;\n    font-size: 16px;\n    padding-left: 15px; }\n    ul.dropdown-menu li:hover {\n      background: #967b73;\n      color: #e8ead9; }\n    ul.dropdown-menu li.disabled {\n      pointer-events: none;\n      color: #a6a6a6; }\n\n.note-dropdown-wrapper {\n  margin-top: 20px;\n  min-width: 115px; }\n  .note-dropdown-wrapper button.note-dropdown {\n    padding-top: 10px;\n    padding-bottom: 10px;\n    padding-right: 12px;\n    border-radius: 4px;\n    border: 1px solid #967b73;\n    background: #c8cbbd; }\n    .note-dropdown-wrapper button.note-dropdown.duplicate {\n      background: #d2795f;\n      color: #e8ead9;\n      animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }\n      .note-dropdown-wrapper button.note-dropdown.duplicate:before {\n        content: '\\41D\\43E\\442\\44B   \\43D\\435   \\43C\\43E\\433\\443\\442   \\43F\\43E\\432\\442\\43E\\440\\44F\\442\\44C\\441\\44F!';\n        font-family: 'Open Sans', sans-serif;\n        font-style: italic;\n        font-weight: lighter;\n        position: absolute;\n        color: #d2795f;\n        bottom: calc(100% + 70px);\n        left: 50%;\n        transform: translateX(-50%);\n        width: 100px; }\n    .note-dropdown-wrapper button.note-dropdown:hover, .note-dropdown-wrapper button.note-dropdown:active, .note-dropdown-wrapper button.note-dropdown:focus {\n      background: #967b73;\n      color: #e8ead9; }\n    .note-dropdown-wrapper button.note-dropdown:active, .note-dropdown-wrapper button.note-dropdown:focus {\n      outline: none; }\n\n.note-dropdown-wrapper.open .dropdown-menu {\n  display: flex; }\n\n.note-dropdown-wrapper.open .dropdown-menu.note-dropdown {\n  top: calc(100% - 85px);\n  flex-wrap: wrap;\n  left: 0;\n  right: 0;\n  padding: 25px;\n  background: #e8ead9;\n  border-radius: 10px;\n  -webkit-box-shadow: none;\n  -moz-box-shadow: none;\n  box-shadow: none; }\n  .note-dropdown-wrapper.open .dropdown-menu.note-dropdown.upper {\n    top: calc(0% + 163px); }\n\n.note-dropdown-wrapper.open .dropdown-menu_note-item {\n  position: relative;\n  cursor: pointer;\n  text-align: center;\n  flex: 13%;\n  max-width: 100px;\n  padding: 12px;\n  border-radius: 4px;\n  margin: 5px;\n  margin-bottom: 10px;\n  user-select: none; }\n  .note-dropdown-wrapper.open .dropdown-menu_note-item:hover, .note-dropdown-wrapper.open .dropdown-menu_note-item.active {\n    background: #967b73;\n    color: #e8ead9; }\n  .note-dropdown-wrapper.open .dropdown-menu_note-item .note-used-hint {\n    position: absolute;\n    color: #4e8cce;\n    font-family: neucharegular;\n    font-size: 15px;\n    margin-left: 3px;\n    bottom: 24px; }\n  .note-dropdown-wrapper.open .dropdown-menu_note-item.taken .note-desc {\n    color: #a1a1a1; }\n  .note-dropdown-wrapper.open .dropdown-menu_note-item.taken:hover .note-desc {\n    color: #e8ead9; }\n  .note-dropdown-wrapper.open .dropdown-menu_note-item.taken:hover .note-used-hint {\n    color: #e8ead9;\n    opacity: .5; }\n\n#presetDropdown {\n  text-align: left;\n  padding-left: 15px;\n  width: 73px;\n  height: 38px;\n  background: transparent;\n  color: #79a4d2;\n  border: 1px #c8cbbd solid;\n  border-radius: 4px; }\n  #presetDropdown .caret {\n    position: absolute;\n    color: #e8ead9;\n    top: 50%;\n    right: 15px;\n    transform: translateY(-50%); }\n  #presetDropdown:hover, #presetDropdown:active, #presetDropdown:focus {\n    color: #e8ead9;\n    border-color: #967b73; }\n    #presetDropdown:hover .caret, #presetDropdown:active .caret, #presetDropdown:focus .caret {\n      color: #967b73; }\n  #presetDropdown:active, #presetDropdown:focus {\n    outline: none; }\n\n.palette-body {\n  padding-top: 60px;\n  max-width: 860px;\n  margin: auto;\n  position: relative; }\n  .palette-body .palette-sound {\n    margin-bottom: 87px;\n    display: inline-block;\n    margin-left: 30px;\n    margin-right: 30px; }\n    .palette-body .palette-sound .palette-note {\n      margin-right: 0; }\n\n.dropdown-close {\n  position: absolute;\n  top: 14px;\n  right: 14px;\n  background: url(" + __webpack_require__(14) + ");\n  width: 16px;\n  height: 16px;\n  cursor: pointer; }\n\n.proceed-buttons {\n  margin-top: 70px;\n  margin-bottom: 70px;\n  position: relative; }\n  .proceed-buttons .long-btn {\n    width: 167px;\n    height: 38px;\n    border-radius: 2px;\n    text-transform: uppercase;\n    font-size: 10px;\n    border: none;\n    cursor: pointer;\n    letter-spacing: 3px; }\n    .proceed-buttons .long-btn:active, .proceed-buttons .long-btn:focus {\n      outline: none; }\n  .proceed-buttons .proceed-button-save {\n    background: #c8cbbd;\n    color: #605d6e;\n    margin-right: 30px; }\n    .proceed-buttons .proceed-button-save.disabled {\n      opacity: 0.5;\n      pointer-events: none;\n      cursor: initial; }\n      .proceed-buttons .proceed-button-save.disabled ~ .long-btn {\n        opacity: 0.5;\n        pointer-events: none;\n        cursor: initial; }\n      .proceed-buttons .proceed-button-save.disabled ~ .save-hint {\n        display: block; }\n      .proceed-buttons .proceed-button-save.disabled:active ~ .save-hint, .proceed-buttons .proceed-button-save.disabled:focus ~ .save-hint {\n        animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }\n  .proceed-buttons .save-hint {\n    position: absolute;\n    display: none;\n    letter-spacing: initial;\n    text-transform: none;\n    bottom: 145%;\n    left: 0;\n    right: 0;\n    margin: auto;\n    font-size: 14px;\n    color: #d2795f;\n    font-family: 'Open Sans', sans-serif;\n    font-style: italic;\n    font-weight: lighter; }\n  .proceed-buttons .proceed-button-proceed {\n    background: #977c73;\n    color: #dce1e8;\n    margin-left: 30px; }\n\nbody {\n  background-color: #3c3c3c;\n  font-family: andikaregular, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.main-wrapper {\n  padding-top: 50px;\n  text-align: center; }\n\nbutton {\n  cursor: pointer; }\n", ""]);
 	
 	// exports
 
@@ -4712,36 +4712,29 @@
 	      duplicates.length > 0 ? dispatch((0, _actions.toggleSaving)(false)) : dispatch((0, _actions.toggleSaving)(true));
 	
 	      var soundsInPreset = []; // filling this one with {name, hint} sound objects
-	      var _iteratorNormalCompletion = true;
-	      var _didIteratorError = false;
-	      var _iteratorError = undefined;
-	
-	      try {
-	        for (var _iterator = currentSounds[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-	          var sound = _step.value;
-	
-	          var soundObj = helpers.getSoundByName(db, sound, true);
-	          soundsInPreset.push({
-	            name: soundObj.name,
-	            hint: soundObj.hint,
-	            isDuplicate: ~duplicates.indexOf(soundObj.name) ? true : false
-	          });
-	        }
-	      } catch (err) {
-	        _didIteratorError = true;
-	        _iteratorError = err;
-	      } finally {
-	        try {
-	          if (!_iteratorNormalCompletion && _iterator.return) {
-	            _iterator.return();
+	      currentSounds.forEach(function (sound, index) {
+	        var soundObj = helpers.getSoundByName(db, sound, true);
+	        var isDuplicate = function isDuplicate() {
+	          if (~duplicates.indexOf(soundObj.name)) {
+	            if (_this.lastChosenNote.name === sound) {
+	              if (_this.lastChosenNote.index !== index) {
+	                return true;
+	              } else {
+	                return false;
+	              };
+	            } else {
+	              return true;
+	            };
+	          } else {
+	            return false;
 	          }
-	        } finally {
-	          if (_didIteratorError) {
-	            throw _iteratorError;
-	          }
-	        }
-	      }
-	
+	        };
+	        soundsInPreset.push({
+	          name: soundObj.name,
+	          hint: soundObj.hint,
+	          isDuplicate: isDuplicate()
+	        });
+	      });
 	      return soundsInPreset;
 	    };
 	
@@ -4758,28 +4751,28 @@
 	      });
 	      forbidden = forbidden.concat(dings);
 	      //removing all forbidden sounds from allSounds array.
-	      var _iteratorNormalCompletion2 = true;
-	      var _didIteratorError2 = false;
-	      var _iteratorError2 = undefined;
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
 	
 	      try {
-	        for (var _iterator2 = forbidden[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-	          var sound = _step2.value;
+	        for (var _iterator = forbidden[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var sound = _step.value;
 	
 	          var index = sounds.indexOf(helpers.getSoundByName(db, sound));
 	          sounds.splice(index, 1);
 	        }
 	      } catch (err) {
-	        _didIteratorError2 = true;
-	        _iteratorError2 = err;
+	        _didIteratorError = true;
+	        _iteratorError = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
-	            _iterator2.return();
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
 	          }
 	        } finally {
-	          if (_didIteratorError2) {
-	            throw _iteratorError2;
+	          if (_didIteratorError) {
+	            throw _iteratorError;
 	          }
 	        }
 	      }
@@ -4802,6 +4795,7 @@
 	      var currentPreset = _this$props5.currentPreset;
 	
 	      var curSounds = currentPreset.sounds.slice();
+	      _this.lastChosenNote = { name: note.name, index: noteIndex - 1 };
 	      curSounds[noteIndex] = note.name;
 	      (0, _actions.editPreset)(db, curSounds)(dispatch);
 	    };
@@ -4820,6 +4814,7 @@
 	    };
 	
 	    _this.chosenNotes = []; //these are to be filtered out of all available sounds
+	    _this.lastChosenNote = {}; //not considering last chosen note a duplicate
 	    _this.currentSounds = _this.getCurrentSounds(props.currentPreset);
 	    return _this;
 	  }
@@ -4912,14 +4907,30 @@
 	  _inherits(PresetPalette, _React$Component);
 	
 	  function PresetPalette() {
+	    var _Object$getPrototypeO;
+	
+	    var _temp, _this, _ret;
+	
 	    _classCallCheck(this, PresetPalette);
 	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(PresetPalette).apply(this, arguments));
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+	
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_Object$getPrototypeO = Object.getPrototypeOf(PresetPalette)).call.apply(_Object$getPrototypeO, [this].concat(args))), _this), _this.findCurSoundIndex = function (name) {
+	      var currentSounds = _this.props.currentSounds;
+	
+	      return currentSounds.map(function (s) {
+	        return s.name;
+	      }).indexOf(name);
+	    }, _temp), _possibleConstructorReturn(_this, _ret);
 	  }
 	
 	  _createClass(PresetPalette, [{
 	    key: 'render',
 	    value: function render() {
+	      var _this2 = this;
+	
 	      var _props = this.props;
 	      var preset = _props.preset;
 	      var currentSounds = _props.currentSounds;
@@ -4959,10 +4970,12 @@
 	                { className: "dropdown-menu note-dropdown" + (gIndex + 1 < 5 ? ' upper' : ''), 'aria-labelledby': "noteDropdown-" + gIndex + 1 },
 	                _react2.default.createElement('div', { className: 'dropdown-close' }),
 	                allSounds.map(function (gSound, index) {
+	                  var curSoundIndex = _this2.findCurSoundIndex(gSound.name);
+	                  var isAlreadySelected = curSoundIndex > -1 && gSound.name !== sound.name;
 	                  return _react2.default.createElement(
 	                    'div',
 	                    {
-	                      className: 'dropdown-menu_note-item ' + (gSound.name === sound.name ? 'active' : ''),
+	                      className: 'dropdown-menu_note-item ' + (gSound.name === sound.name ? 'active' : isAlreadySelected ? 'taken' : ''),
 	                      key: 'gs-' + index,
 	                      onMouseEnter: function onMouseEnter(event) {
 	                        return helpers.playSound(gSound.id);
@@ -4973,7 +4986,16 @@
 	                      onClick: function onClick(event) {
 	                        chooseNote(gSound, gIndex + 1);
 	                      } },
-	                    gSound.name + ' (' + gSound.hint + ')'
+	                    _react2.default.createElement(
+	                      'span',
+	                      { className: 'note-desc' },
+	                      gSound.name + ' (' + gSound.hint + ')'
+	                    ),
+	                    isAlreadySelected && _react2.default.createElement(
+	                      'span',
+	                      { className: 'note-used-hint' },
+	                      curSoundIndex + 2
+	                    )
 	                  );
 	                })
 	              )
@@ -4982,6 +5004,9 @@
 	        })
 	      );
 	    }
+	
+	    // searches current palette by name and returns index or -1;
+	
 	  }]);
 	
 	  return PresetPalette;
@@ -16834,8 +16859,7 @@
 	
 	var saveCustomPreset = function saveCustomPreset(db, currentPreset) {
 	  return function (dispatch) {
-	    if (currentPreset.name == '--') {
-	      currentPreset.name = 'Мой';
+	    if (currentPreset.name == 'Мой') {
 	      // if custom preset in db, remove
 	      var customPresetDbIndex = db.presets.indexOf(helpers.getPresetByName(db, 'Мой'));
 	      if (~customPresetDbIndex) db.presets.splice(customPresetDbIndex, 1);
@@ -16851,7 +16875,7 @@
 	
 	var editPreset = function editPreset(db, sounds) {
 	  return function (dispatch) {
-	    var newCurrentPreset = { id: sounds.join('_'), name: '--', sounds: sounds };
+	    var newCurrentPreset = { id: sounds.join('_'), name: 'Мой', sounds: sounds };
 	    dispatch(updatePreset(newCurrentPreset));
 	  };
 	};
@@ -16917,12 +16941,7 @@
 	      {
 	        className: 'proceed-button-save long-btn ' + (props.saveEnabled ? '' : 'disabled'),
 	        onClick: props.onClickSave },
-	      'Сохранить*',
-	      _react2.default.createElement(
-	        'span',
-	        { className: 'save-hint' },
-	        'Ноты в пресете не должны повторяться!'
-	      )
+	      'Сохранить*'
 	    ),
 	    _react2.default.createElement(
 	      'button',
@@ -16930,6 +16949,11 @@
 	        className: 'proceed-button-proceed long-btn',
 	        onClick: props.onClickProceed },
 	      'Заказать >'
+	    ),
+	    _react2.default.createElement(
+	      'span',
+	      { className: 'save-hint' },
+	      'Ноты в пресете не могут повторяться!'
 	    )
 	  );
 	};
