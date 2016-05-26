@@ -1,8 +1,8 @@
 .proceed-buttons
   margin-top: 70px
   margin-bottom: 70px
+  position: relative
   .long-btn
-    position: relative
     width: 167px
     height: 38px
     border-radius: 2px
@@ -18,22 +18,34 @@
     background: #c8cbbd
     color: #605d6e
     margin-right: 30px
-    .save-hint
-      position: absolute
-      display: none
-      letter-spacing: initial
-      text-transform: none
-      bottom: 110%
-      left: 0
-      font-size: 14px
-      color: $color-duplicate
+  
     &.disabled
-      background: #c5c6c2
-      .save-hint
+      opacity: 0.5
+      pointer-events: none
+      cursor: initial
+      & ~.long-btn
+        opacity: 0.5
+        pointer-events: none
+        cursor: initial
+      & ~.save-hint
         display: block
       &:active, &:focus
-        .save-hint
-          animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+        & ~ .save-hint
+            animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+  .save-hint
+    position: absolute
+    display: none
+    letter-spacing: initial
+    text-transform: none
+    bottom: 145%
+    left: 0
+    right: 0
+    margin: auto
+    font-size: 14px
+    color: $color-duplicate
+    font-family: 'Open Sans', sans-serif
+    font-style: italic
+    font-weight: lighter
 
   .proceed-button-proceed
     background: #977c73

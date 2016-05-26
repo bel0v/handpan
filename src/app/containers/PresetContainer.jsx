@@ -17,6 +17,7 @@ export default class PresetContainer extends React.Component {
   constructor(props){
     super(props);
     this.chosenNotes = []; //these are to be filtered out of all available sounds
+    this.lastChosenNote = {}; //not considering last chosen note a duplicate
     this.currentSounds = this.getCurrentSounds(props.currentPreset)
   }
   componentWillReceiveProps(nextProps){
@@ -78,14 +79,28 @@ export default class PresetContainer extends React.Component {
     (duplicates.length > 0) ? dispatch(toggleSaving(false)) : dispatch(toggleSaving(true));
 
     let soundsInPreset = []; // filling this one with {name, hint} sound objects
-    for (let sound of currentSounds) {
+    currentSounds.forEach((sound, index) => {
       let soundObj = helpers.getSoundByName(db, sound, true);
+      let isDuplicate = () => {
+        if (~duplicates.indexOf(soundObj.name)) {
+          if (this.lastChosenNote.name === sound) {
+            if (this.lastChosenNote.index !== index) {
+              return true;
+            }
+            else {return false};
+          }
+          else {return true};
+        }
+        else {
+          return false;
+        }
+      }
       soundsInPreset.push({
         name: soundObj.name, 
         hint: soundObj.hint, 
-        isDuplicate: (~duplicates.indexOf(soundObj.name) ? true : false)
+        isDuplicate: isDuplicate()
       });
-    }
+    });
     return soundsInPreset;
   }
 
@@ -112,6 +127,7 @@ export default class PresetContainer extends React.Component {
   chooseNote = (note, noteIndex) => {
     const {db, dispatch, currentPreset} = this.props;
     let curSounds = currentPreset.sounds.slice();
+    this.lastChosenNote = {name: note.name, index: noteIndex -1};
     curSounds[noteIndex] = note.name;
     editPreset(db, curSounds)(dispatch);
   }

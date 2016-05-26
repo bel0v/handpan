@@ -100,7 +100,19 @@ ul.dropdown-menu
     background: #c8cbbd
     &.duplicate
       background: $color-duplicate
+      color: $color-light
       animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+      &:before
+        content: 'Ноты не могут повторяться!'
+        font-family: 'Open Sans', sans-serif
+        font-style: italic
+        font-weight: lighter
+        position: absolute
+        color: $color-duplicate
+        bottom: calc(100% + 70px)
+        left: 50%
+        transform: translateX(-50%)
+        width: 100px
 
     &:hover, &:active, &:focus
       background: $color-brown
@@ -128,6 +140,7 @@ ul.dropdown-menu
         top: calc(0% + 163px)
 
     &_note-item
+      position: relative
       cursor: pointer
       text-align: center
       flex: 13%
@@ -140,7 +153,22 @@ ul.dropdown-menu
       &:hover, &.active
         background: $color-brown
         color: $color-light
-
+      .note-used-hint
+        position: absolute
+        color: #4e8cce
+        font-family: neucharegular
+        font-size: 15px
+        margin-left: 3px
+        bottom: 24px
+      &.taken
+        .note-desc
+          color: #a1a1a1
+        &:hover 
+          .note-desc
+            color: $color-light
+          .note-used-hint
+            color: $color-light
+            opacity: .5
 #presetDropdown
   text-align: left
   padding-left: 15px
