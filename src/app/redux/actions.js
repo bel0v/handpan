@@ -10,8 +10,7 @@ const chooseCurrentPreset = (db, presetId) => {
 
 const saveCustomPreset = (db, currentPreset) => {
   return (dispatch) => {
-    if (currentPreset.name == '--'){ 
-      currentPreset.name = 'Мой';
+    if (currentPreset.name == 'Мой'){ 
       // if custom preset in db, remove
       let customPresetDbIndex = db.presets.indexOf(helpers.getPresetByName(db, 'Мой'));
       if (~customPresetDbIndex) db.presets.splice(customPresetDbIndex, 1);
@@ -25,7 +24,7 @@ const saveCustomPreset = (db, currentPreset) => {
 
 const editPreset = (db, sounds) => {
   return (dispatch) => {
-    let newCurrentPreset = {id: sounds.join('_'), name: '--', sounds: sounds};
+    let newCurrentPreset = {id: sounds.join('_'), name: 'Мой', sounds: sounds};
     dispatch(updatePreset(newCurrentPreset));
   } 
 }
