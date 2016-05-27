@@ -102,7 +102,7 @@ ul.dropdown-menu
     &.duplicate
       background: $color-duplicate
       color: $color-light
-      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) backwards
       &:before
         content: 'Ноты не могут повторяться!'
         font-family: 'Open Sans', sans-serif
@@ -110,10 +110,9 @@ ul.dropdown-menu
         font-weight: lighter
         position: absolute
         color: $color-duplicate
-        bottom: calc(100% + 70px)
-        left: 50%
-        transform: translateX(-50%)
         width: 100px
+        margin-top: -120px
+
       &:hover
         background: #b96249
       &:active, &:focus
