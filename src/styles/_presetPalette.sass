@@ -147,6 +147,7 @@ ul.dropdown-menu
       position: relative
       cursor: pointer
       text-align: center
+      color: black
       flex: 13%
       max-width: 100px
       padding: 12px
@@ -236,3 +237,41 @@ ul.dropdown-menu
   width: 16px
   height: 16px
   cursor: pointer
+
+@media screen and (min-width: 1279px)
+  .palette-body
+    max-width: initial
+    .palette-sound
+      margin-left: 20px
+      margin-right: 20px
+
+
+@media screen and (max-width: 480px)
+  .palette-header
+    &-left
+      margin: 0 auto
+      position: relative
+      margin-bottom: 30px
+    
+    &-right, &-middle
+      position: relative
+      display: inline-block
+    
+    &-right
+      margin-left: 30px
+
+  .palette-body
+    padding-top: 15px
+
+    .palette-sound
+      margin-left: 0
+      margin-right: 0
+      margin-bottom: 40px
+    .sound-hint
+      display: none
+  
+  .proceed-buttons
+    margin-top: 0px !important
+  .proceed-button-save, .proceed-button-proceed
+    margin: 30px auto !important
+    display: block

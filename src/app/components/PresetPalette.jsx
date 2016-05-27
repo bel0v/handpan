@@ -20,10 +20,10 @@ export default class PresetPalette extends React.Component {
                   data-toggle="dropdown" 
                   aria-haspopup="true" 
                   aria-expanded="false"
+                  onClick={e => this.placePalette(e.target)}
                 >
                   {sound.name +' ('+ sound.hint +')'}
                   <span className="caret"></span>
-                </button>
                 <div className={"dropdown-menu note-dropdown" + (gIndex + 1 < 5 ? ' upper' : '')} aria-labelledby={"noteDropdown-"+ gIndex+1}>
                   <div className='dropdown-close' />
                   {allSounds.map( (gSound, index) => {
@@ -43,12 +43,13 @@ export default class PresetPalette extends React.Component {
                       onClick={(event) => {
                         chooseNote(gSound, gIndex + 1)}
                       }>
-                        <span className='note-desc'>{gSound.name +' ('+ gSound.hint +')'}</span>
+                        <span className='note-desc'>{gSound.name}<span className='sound-hint'>{' ('+ gSound.hint + ')'}</span></span>
                         {(isAlreadySelected || isActiveDuplicate ) && 
                           <span className='note-used-hint'>{curSoundIndex}</span>}
                       </div>;
                   })}
                 </div>
+                </button>
               </div>
               <svg className='palette-note' viewBox="0 0 88.62 88.62">
                 <Note number={gIndex + 2} outerCircle={false} />
@@ -60,7 +61,10 @@ export default class PresetPalette extends React.Component {
     )
 
   }
-
+  placePalette =(ddButton) => {
+    let ddMenu = ddButton.children[1];
+    ddMenu.style.top = (ddButton.offsetTop + 50 + 'px');
+  }
   // searches current palette by name and returns index(es) or '';
   findCurSoundIndex = (name) => {
     const {currentSounds} = this.props;
