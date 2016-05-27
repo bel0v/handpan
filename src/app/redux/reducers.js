@@ -5,7 +5,7 @@ export const initialState = {
   canBeSaved: true,
   db: {
     presets: [
-      {id: 'p0', name: 'Мой'}, //fake
+      // {id: 'p0', name: 'Мой'}, //fake
       {id: 'p1', name: '№1', sounds:["C#3","G#3","A3","C#4","Eb4","E4","F#4","G#4","B4"]},
       {id: 'p2', name: '№2', sounds:["C#3","G#3","B3","C#4","Eb4","E4","F#4","G#4","B4"]},
       {id: 'p3', name: '№3', sounds:["D3","A3","Bb3","C4","D4","E4","F4","G4","A4"]},
