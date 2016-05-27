@@ -1,22 +1,23 @@
 import React from 'react'
 import * as helpers from '../redux/dbhelpers.js'
 
-const Note = (props) => {
+const Note = ({number, outerCircle, sound, cx, cy, transformText,transformCircle}) => {
   let inner = (
-      <g className={"group-"+ props.number +"-inner"} 
-        onMouseEnter={!props.outerCircle && props.sound ? event => helpers.playSound(props.sound) : ''}
-        onTouchStart={!props.outerCircle && props.sound ? event => helpers.playSound(props.sound) : ''}>
-        <circle className="cls-4" cx={props.cx} cy={props.cy} r="41.81" transform={props.transformCircle}/>
-        <text className="cls-5" transform={props.transformText}>{props.number}</text>
+      <g className={"group-"+ number +"-inner"} 
+        onMouseEnter={!outerCircle && sound ? event => helpers.playSound(sound, true) : ''}
+        onTouchStart={!outerCircle && sound ? event => helpers.playSound(sound, true) : ''}>
+        <circle className="cls-4" cx={cx} cy={cy} r="41.81" transform={transformCircle}/>
+        <text className="cls-5" transform={transformText}>{number}</text>
       </g>    
     );
   
-  if (props.outerCircle) {
+  if (outerCircle) {
     return (
-      <g className={"group-" + props.number}
-        onMouseEnter={props.sound ? event => helpers.playSound(props.sound): ''}
-        onTouchStart={props.sound ? event => helpers.playSound(props.sound): ''}>
-        <circle className="cls-1" cx={props.cx} cy={props.cy} r="70.08" transform={props.transformCircle}/>
+      <g className={"group-" + number}
+        onMouseEnter={sound ? event => helpers.playSound(sound, true): ''}
+        onTouchStart={sound ? event => helpers.playSound(sound, true): ''}
+        onMouseLeave={sound ? event => helpers.stopSound(sound) : ''}>
+        <circle className="cls-1" cx={cx} cy={cy} r="70.08" transform={transformCircle}/>
         {inner}
       </g>
     );

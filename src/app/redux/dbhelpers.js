@@ -14,22 +14,26 @@ const getSoundByName = (db, soundName, noDings = false) => {
     })[0]
 }
 
-const playSound = (soundId) => { //kinda anti-pattern, but this is more transparent.
+const playSound = (soundId, isLooped = false) => { //kinda anti-pattern, but this is more transparent.
   let player = document.getElementById('player-'+soundId);
   let soundPlayed = false;
   if(!soundPlayed) {
     soundPlayed = true;
     setTimeout(function() {
       soundPlayed = false;
-    }, 300);
+    }, player.duration);
     player.currentTime = 0;
+    if (isLooped){
+      player.loop = true;
+    }
     player.play();
   }
 };
 
 const stopSound = (sound) => { //kinda anti-pattern, but this is more transparent.
   let player = document.getElementById('player-'+sound);
-  player.pause();
+  player.loop = false;
+  player.onended;
 };
 
 
