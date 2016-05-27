@@ -113,6 +113,10 @@ ul.dropdown-menu
         left: 50%
         transform: translateX(-50%)
         width: 100px
+      &:hover
+        background: #b96249
+      &:active, &:focus
+        background: $color-duplicate
 
     &:hover, &:active, &:focus
       background: $color-brown
@@ -153,6 +157,9 @@ ul.dropdown-menu
       &:hover, &.active
         background: $color-brown
         color: $color-light
+      &.duplicate
+        background: none
+        color: $color-duplicate
       .note-used-hint
         position: absolute
         color: #4e8cce

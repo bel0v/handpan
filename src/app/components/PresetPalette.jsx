@@ -32,11 +32,15 @@ export default class PresetPalette extends React.Component {
                   <div className='dropdown-close' />
                   {allSounds.map( (gSound, index) => {
                     let curSoundIndex = this.findCurSoundIndex(gSound.name);
-                    let isAlreadySelected = ((curSoundIndex > -1) && (gSound.name !== sound.name));
+                    let isActive = (gSound.name === sound.name);
+                    let isAlreadySelected = ((curSoundIndex.length) && !isActive);
+                    let isActiveDuplicate = (sound.isDuplicate && isActive);
+
                     return <div
                       className={'dropdown-menu_note-item ' + 
                         (gSound.name === sound.name ? 'active' : 
-                          isAlreadySelected ? 'taken' : '')} 
+                          isAlreadySelected ? 'taken' : '') +
+                        (isActiveDuplicate ? ' duplicate' : '')} 
                       key={'gs-'+index}
                       onMouseEnter={(event) => helpers.playSound(gSound.id)}
                       onMouseLeave={(event) => helpers.stopSound(gSound.id)}
@@ -44,8 +48,8 @@ export default class PresetPalette extends React.Component {
                         chooseNote(gSound, gIndex + 1)}
                       }>
                         <span className='note-desc'>{gSound.name +' ('+ gSound.hint +')'}</span>
-                        {isAlreadySelected && 
-                          <span className='note-used-hint'>{curSoundIndex + 2}</span>}
+                        {(isAlreadySelected || isActiveDuplicate ) && 
+                          <span className='note-used-hint'>{curSoundIndex}</span>}
                       </div>;
                   })}
                 </div>
@@ -59,10 +63,15 @@ export default class PresetPalette extends React.Component {
 
   }
 
-  // searches current palette by name and returns index or -1;
+  // searches current palette by name and returns index(es) or '';
   findCurSoundIndex = (name) => {
     const {currentSounds} = this.props;
-    return currentSounds.map(s => s.name).indexOf(name);
+    const curSoundNames = currentSounds.map(s => s.name);
+    let indexes = curSoundNames.reduce((a,e,i) => {
+        if(e === name) a.push(i);
+        return a;
+      }, []);
+    return indexes.map(i => i + 2).join(', ');
   }
 }
 
