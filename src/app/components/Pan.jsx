@@ -10,21 +10,16 @@ const Pan = (props) =>
         </title>
         <circle className="cls-1" cx="413.75" cy="413.75" r="396.25"/>
         <circle className="cls-3" cx="413.75" cy="413.75" r="411.25"/>
-        <g 
-          className="group-1"
-          onMouseEnter={event => helpers.playSound(props.sounds[0])}
-          onTouchStart={event => helpers.playSound(props.sounds[0])}>
-          <path className="cls-2" d="M413.75 292.52a121.23 121.23 0 1 1-85.72 35.51 120.44 120.44 0 0 1 85.72-35.51m0-2a123.23 123.23 0 1 0 123.23 123.23 123.23 123.23 0 0 0-123.23-123.23z"/>
-          <circle className="cls-2 fake" cx="500" cy="500" r="41.81" transform="rotate(-89.88 413.642 500.087)"></circle>
-          <Note
-            number={1} 
-            cx="500" 
-            cy="500" 
-            transformCircle="rotate(-89.88 413.642 500.087)" 
-            transformText="translate(403.54 429.22)"
-            outerCircle={false}
-          />
-        </g>
+
+        <Note
+          sound ={ props.sounds[0] }
+          number={1} 
+          cx="500" 
+          cy="500" 
+          transformCircle="rotate(-89.88 413.642 500.087)" 
+          transformText="translate(403.54 429.22)"
+          outerCircle={true}
+        />
         <Note 
           sound ={ props.sounds[1] }
           number={2} 
