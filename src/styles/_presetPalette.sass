@@ -160,6 +160,9 @@ ul.dropdown-menu
       &.duplicate
         background: none
         color: $color-duplicate
+        &:hover
+          color: #b96249
+
       .note-used-hint
         position: absolute
         color: #4e8cce
@@ -167,6 +170,7 @@ ul.dropdown-menu
         font-size: 15px
         margin-left: 3px
         bottom: 24px
+        display: inline-table
       &.taken
         .note-desc
           color: #a1a1a1
@@ -206,19 +210,23 @@ ul.dropdown-menu
   position: relative
   .palette-sound
     margin-bottom: 87px
-    display: inline-block
+    display: inline-flex
+    flex-direction: column
     margin-left: 30px
     margin-right: 30px
     .palette-note
-      margin-right: 0
+      order: -1
+      margin: auto
 
-  // .note-dropdown-wrapper.open + .palette-note
-  //   margin-right: 20px
-  //   circle, text
-  //     stroke: $color-light
-  //   circle
-  //     stroke-width: 6px
-  //     transition: none
+      circle
+        transition: none
+
+  .note-dropdown-wrapper.open + .palette-note
+    circle, text
+      stroke: $color-light
+    circle
+      stroke-width: 6px
+      transition: none
 
 .dropdown-close
   position: absolute

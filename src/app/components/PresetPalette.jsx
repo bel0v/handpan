@@ -5,7 +5,6 @@ import * as helpers from '../redux/dbhelpers.js'
 
 
 export default class PresetPalette extends React.Component {
-
   render(){
     const {preset, currentSounds, allSounds, chooseNote} = this.props;
     return (
@@ -13,9 +12,6 @@ export default class PresetPalette extends React.Component {
         {currentSounds.map((sound, gIndex) => {
           return (
             <div key={'s'+ (gIndex+1)} className = 'palette-sound'>
-              <svg className='palette-note' viewBox="0 0 88.62 88.62">
-                <Note number={gIndex + 2} outerCircle={false} />
-              </svg>
               <div className="note-dropdown-wrapper">
                 <button 
                   className={'note-dropdown ' + (sound.isDuplicate ? 'duplicate' : '')} 
@@ -53,8 +49,10 @@ export default class PresetPalette extends React.Component {
                       </div>;
                   })}
                 </div>
-
               </div>
+              <svg className='palette-note' viewBox="0 0 88.62 88.62">
+                <Note number={gIndex + 2} outerCircle={false} />
+              </svg>
             </div>
           )
         })}
