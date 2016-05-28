@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: "./src/entry.js",
@@ -12,7 +13,8 @@ module.exports = {
             $: "jquery",
             jQuery: "jquery",
             "window.jQuery": "jquery"
-        })
+        }),
+        new ExtractTextPlugin("styles.css"),
     ],
     devtool: 'source-map',
     resolve: {
@@ -20,7 +22,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: "style!css" },
+            { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css') },
             {
                 test: /\.jsx?$/,
                 exclude: /(node_modules|bower_components)/,
@@ -33,11 +35,15 @@ module.exports = {
             {
                 test: /\.sass$/,
                 // Passing indentedSyntax query param to node-sass
-                loaders: ["style", "css", "sass?indentedSyntax"]
+                loader: ExtractTextPlugin.extract(
+                  'style',
+                  'css!resolve-url-loader!sass?indentedSyntax&sourceMap',
+                  ''
+                ),
             },
             {
                 test: /\.(less)$/,
-                loader: "style!css!less"
+                loader: ExtractTextPlugin.extract('style', '!css!less')
             },            
             {
                 test: /\.(png)$/,
