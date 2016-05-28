@@ -54,10 +54,10 @@
   display: inline-block
   vertical-align: middle
   background-repeat: no-repeat
-  &.left
+  &.arrow-dd-left
     transform: scaleX(-1)
     margin-right: 10px
-  &.right
+  &.arrow-dd-right
     margin-left: 10px
   &:hover
     -webkit-filter: brightness(180%)
@@ -93,6 +93,7 @@ ul.dropdown-menu
   min-width: 115px
 
   button.note-dropdown
+    color: $color-font-darkblue
     padding-top: 10px
     padding-bottom: 10px
     padding-right: 12px
@@ -118,14 +119,20 @@ ul.dropdown-menu
       &:active, &:focus
         background: $color-duplicate
 
+      .caret
+        color: $color-light
+
     &:hover, &:active, &:focus
       background: $color-brown
       color: $color-light
+      .caret
+        color: $color-light
     &:active, &:focus
-      outline: none    
+      outline: none
 
-    .caret-dd
+    .caret
       color: $color-brown
+      margin-left: 10px
 
 .note-dropdown-wrapper.open
   .dropdown-menu
@@ -134,7 +141,7 @@ ul.dropdown-menu
   .dropdown-menu
     &.note-dropdown
       top: calc(100% - 85px)
-      flex-wrap: wrap    
+      flex-wrap: wrap
       left: 0
       right: 0
       padding: 25px
@@ -150,7 +157,7 @@ ul.dropdown-menu
       position: relative
       cursor: pointer
       text-align: center
-      color: black
+      color: $color-font-darkblue
       flex: 13%
       max-width: 100px
       padding: 12px
@@ -178,7 +185,7 @@ ul.dropdown-menu
       &.taken
         .note-desc
           color: #a1a1a1
-        &:hover 
+        &:hover
           .note-desc
             color: $color-light
           .note-used-hint
@@ -257,11 +264,11 @@ ul.dropdown-menu
       margin: 0 auto
       position: relative
       margin-bottom: 30px
-    
+
     &-right, &-middle
       position: relative
       display: inline-block
-    
+
     &-right
       margin-left: 30px
 
@@ -274,7 +281,7 @@ ul.dropdown-menu
       margin-bottom: 40px
     .sound-hint
       display: none
-  
+
   .proceed-buttons
     margin-top: 0px !important
   .proceed-button-save, .proceed-button-proceed
