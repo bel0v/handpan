@@ -1,31 +1,31 @@
 .mainPan
   width: 400px
 
-.cls-1,.cls-2,.cls-3,.cls-4 
+.cls-1,.cls-2,.cls-3,.cls-4
   fill: transparent
   stroke-miterlimit: 10
-  
-.cls-1,.cls-3 
+
+.cls-1,.cls-3
   stroke: $color-blue
 
-.cls-1 
+.cls-1
   stroke-width: 2px
 
-.cls-2 
+.cls-2
   stroke: $color-blue
   &.fake
     stroke: transparent
     stroke-width: 160px
-    
-.cls-3,.cls-4 
+
+.cls-3,.cls-4
   stroke-width: 4px
 
-.cls-4 
+.cls-4
   stroke: $color-blue-light
   transition: all ease-in 1.5s
 
 
-.cls-5 
+.cls-5
   font-size: 41.66px
   fill: $color-blue-light
   font-family: neucharegular
@@ -33,11 +33,11 @@
 
 $group: group !default
 
-.mainPan 
+.mainPan
   g
     cursor: pointer
 
-  > g:hover > g, .cls-2:hover + g
+  > g:hover > g, .group-1-inner:hover
     circle, text
       stroke: $color-light
     circle
