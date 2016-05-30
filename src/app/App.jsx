@@ -51,9 +51,9 @@ export default class App extends React.Component {
     const {currentPreset, db} = this.props;  
     let soundsArr = currentPreset.sounds.map((s, index) => {
       let sObj = helpers.getSoundByName(db, s);
-      return `<strong>${index == 0 ? 'динг' : index}:</strong> ${sObj.name}(${sObj.hint})`;
+      return `${index == 0 ? 'динг' : index}: ${sObj.name}(${sObj.hint})`;
     });
-    let sendString = `<br><strong>Пре-set</strong> ${currentPreset.name === 'Мой' ? 'свой' : currentPreset.name}.<br> ${soundsArr.join(', ')}`
+    let sendString = `Пре-set ${currentPreset.name === 'Мой' ? 'свой' : currentPreset.name}. ${soundsArr.join(', ')}`
     localStorage.setItem('panConstructor',sendString);
   }
 
