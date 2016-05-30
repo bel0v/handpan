@@ -6,6 +6,7 @@ const Note = ({number, outerCircle, sound, cx, cy, transformText,transformCircle
       <g className={"group-"+ number +"-inner"}
         onMouseEnter={!outerCircle && sound ? event => helpers.playSound(sound, true) : ''}
         onTouchStart={!outerCircle && sound ? event => helpers.playSound(sound, true) : ''}
+        onTouchEnd={sound ? event => helpers.stopSound(sound) : ''}
         onMouseLeave={sound ? event => helpers.stopSound(sound) : ''}>
         <circle className="cls-4" cx={cx} cy={cy} r="41.81" transform={transformCircle}/>
         <text className="cls-5" transform={transformText}>{number}</text>
@@ -17,6 +18,7 @@ const Note = ({number, outerCircle, sound, cx, cy, transformText,transformCircle
       <g className={"group-" + number}
         onMouseEnter={sound ? event => helpers.playSound(sound, true): ''}
         onTouchStart={sound ? event => helpers.playSound(sound, true): ''}
+        onTouchEnd={sound ? event => helpers.stopSound(sound) : ''}
         onMouseLeave={sound ? event => helpers.stopSound(sound) : ''}>
         <circle className="cls-1" cx={cx} cy={cy} r="70.08" transform={transformCircle}/>
         {inner}
