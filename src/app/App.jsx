@@ -53,7 +53,7 @@ export default class App extends React.Component {
       let sObj = helpers.getSoundByName(db, s);
       return `${index == 0 ? 'динг' : index}: ${sObj.name}(${sObj.hint})`;
     });
-    let sendString = `Пре-set ${currentPreset.name === 'Мой' ? 'свой' : currentPreset.name}\n${soundsArr.join(', ')}`
+    let sendString = `Пре-set ${currentPreset.name === 'Мой' ? 'свой' : currentPreset.name}. ${soundsArr.join(', ')}`
     localStorage.setItem('panConstructor',sendString);
   }
 
