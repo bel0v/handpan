@@ -16,8 +16,8 @@ function main() {
     const store = createStore(preset, initialState, window.devToolsExtension ? window.devToolsExtension() : undefined);
     const app = document.createElement('div');
     app.className = 'handpan-constructor-wrapper'
-    if (document.getElementById('content')){
-      document.getElementById('content').appendChild(app);
+    if (document.getElementByClassName('be-section-pad')[0]){
+      document.getElementByClassName('be-section-pad')[0].appendChild(app);
     }
     else {
       document.body.appendChild(app);
