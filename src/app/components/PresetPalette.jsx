@@ -13,14 +13,13 @@ export default class PresetPalette extends React.Component {
           return (
             <div key={'s'+ (gIndex+1)} className = 'palette-sound'>
               <div className="note-dropdown-wrapper">
-                <button
-                  className={'note-dropdown ' + (sound.isDuplicate ? 'duplicate' : '')}
+                <div
+                  className={'note-dropdown-btn ' + (sound.isDuplicate ? 'duplicate' : '')}
                   id={"noteDropdown-"+ gIndex+1}
-                  type="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
-                  onClick={e => this.placePalette(e.target)}
+                  onClick={e => this.placePalette(e.currentTarget)}
                 >
                   <span className='dd-button-text'>
                     {sound.name +' ('+ sound.hint +')'}
@@ -46,13 +45,14 @@ export default class PresetPalette extends React.Component {
                       onClick={(event) => {
                         chooseNote(gSound, gIndex + 1)}
                       }>
-                        <span className='note-desc'>{gSound.name}<span className='sound-hint'>{' ('+ gSound.hint + ')'}</span></span>
-                        {(isAlreadySelected || isActiveDuplicate ) &&
-                          <span className='note-used-hint'>{curSoundIndex}</span>}
+                        <span className='note-desc'>{gSound.name}<span className='sound-hint'>{' ('+ gSound.hint + ')'}</span>
+                          {(isAlreadySelected || isActiveDuplicate ) &&
+                            <span className='note-used-hint'>{curSoundIndex}</span>}
+                        </span>
                       </div>;
                   })}
                 </div>
-                </button>
+                </div>
               </div>
               <svg className='palette-note' viewBox="0 0 88.62 88.62">
                 <Note number={gIndex + 2} outerCircle={false} />
@@ -65,7 +65,7 @@ export default class PresetPalette extends React.Component {
 
   }
   placePalette =(ddButton) => {
-    let ddMenu = ddButton.children[1];
+    let ddMenu = ddButton.children[2];
     ddMenu.style.top = (ddButton.offsetTop + 50 + 'px');
   }
   // searches current palette by name and returns index(es) or '';
