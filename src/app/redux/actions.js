@@ -22,10 +22,20 @@ const saveCustomPreset = (db, currentPreset) => {
   }
 }
 
+const addCustomPreset = (db, newPreset) => {
+    if(!db.presets.find(p => p.id == newPreset.id)) {db.presets.unshift(newPreset);}
+    dispatch(addPreset(newPreset));
+}
+
+
+
 const editPreset = (db, sounds) => {
   return (dispatch) => {
     let newCurrentPreset = {id: sounds.join('_'), name: 'Мой', sounds: sounds};
     dispatch(updatePreset(newCurrentPreset));
+    if (db.presets[0].id === 'p0') {db.presets.shift()}
+    newCurrentPreset.id = 'p0';
+    dispatch(addPreset(newCurrentPreset));
   } 
 }
 
@@ -36,7 +46,7 @@ const updatePreset = (newCurrentPreset) =>{
   }
 }
 
-const addCustomPreset = (newCustomPreset) =>{
+const addPreset = (newCustomPreset) =>{
   return {
     type: 'ADD_PRESET',
     newCustomPreset
@@ -63,5 +73,6 @@ module.exports = {
   editPreset,
   toggleSaving,
   updatePreset,
-  saveCustomPreset
+  saveCustomPreset,
+  addCustomPreset
 }

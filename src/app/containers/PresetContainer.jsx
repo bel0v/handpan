@@ -3,7 +3,7 @@ import PresetPalette from '../components/PresetPalette.jsx'
 import PresetPaletteHeader from '../components/PresetPaletteHeader.jsx'
 import { connect } from 'react-redux'
 import * as helpers from '../redux/dbhelpers.js'
-import {chooseCurrentPreset, editPreset, toggleSaving, updatePreset} from '../redux/actions.js'
+import {chooseCurrentPreset, editPreset, toggleSaving, updatePreset, addCustomPreset} from '../redux/actions.js'
 
 @connect(
   state => ({

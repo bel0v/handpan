@@ -62,9 +62,10 @@ export const preset = (state = initialState, action) => {
         currentPreset: action.newCurrentPreset
       });
     case "ADD_PRESET":
-      return Object.assign({}, state, {
-        customPreset: action.newCustomPreset
-      });
+      let presets = state.db.presets.slice();
+      let newPreset = action.newCustomPreset;
+      presets.unshift(newPreset);
+      return {...state, db: {...state.db, presets: presets}}
     case "TOGGLE_SAVING":
       return Object.assign({}, state, {
         canBeSaved: action.savingState
