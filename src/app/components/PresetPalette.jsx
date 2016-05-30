@@ -13,16 +13,19 @@ export default class PresetPalette extends React.Component {
           return (
             <div key={'s'+ (gIndex+1)} className = 'palette-sound'>
               <div className="note-dropdown-wrapper">
-                <button 
-                  className={'note-dropdown ' + (sound.isDuplicate ? 'duplicate' : '')} 
-                  id={"noteDropdown-"+ gIndex+1} 
-                  type="button" 
-                  data-toggle="dropdown" 
-                  aria-haspopup="true" 
+                <button
+                  className={'note-dropdown ' + (sound.isDuplicate ? 'duplicate' : '')}
+                  id={"noteDropdown-"+ gIndex+1}
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
                   aria-expanded="false"
                   onClick={e => this.placePalette(e.target)}
                 >
-                  {sound.name +' ('+ sound.hint +')'}
+                  <span className='dd-button-text'>
+                    {sound.name +' ('+ sound.hint +')'}
+                    <div className ='duplicate-hint'>Ноты не могут повторяться!</div>
+                  </span>
                   <span className="caret"></span>
                 <div className={"dropdown-menu note-dropdown" + (gIndex + 1 < 5 ? ' upper' : '')} aria-labelledby={"noteDropdown-"+ gIndex+1}>
                   <div className='dropdown-close' />
@@ -33,10 +36,10 @@ export default class PresetPalette extends React.Component {
                     let isActiveDuplicate = (sound.isDuplicate && isActive);
 
                     return <div
-                      className={'dropdown-menu_note-item ' + 
-                        (gSound.name === sound.name ? 'active' : 
+                      className={'dropdown-menu_note-item ' +
+                        (gSound.name === sound.name ? 'active' :
                           isAlreadySelected ? 'taken' : '') +
-                        (isActiveDuplicate ? ' duplicate' : '')} 
+                        (isActiveDuplicate ? ' duplicate' : '')}
                       key={'gs-'+index}
                       onMouseEnter={(event) => helpers.playSound(gSound.id)}
                       onMouseLeave={(event) => helpers.stopSound(gSound.id)}
@@ -44,7 +47,7 @@ export default class PresetPalette extends React.Component {
                         chooseNote(gSound, gIndex + 1)}
                       }>
                         <span className='note-desc'>{gSound.name}<span className='sound-hint'>{' ('+ gSound.hint + ')'}</span></span>
-                        {(isAlreadySelected || isActiveDuplicate ) && 
+                        {(isAlreadySelected || isActiveDuplicate ) &&
                           <span className='note-used-hint'>{curSoundIndex}</span>}
                       </div>;
                   })}

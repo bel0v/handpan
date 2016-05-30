@@ -6,7 +6,8 @@ module.exports = {
     entry: "./src/entry.js",
     output: {
         path:'./public',
-        filename: "bundle.js"
+        filename: "bundle.js",
+        publicPath: "/music/",
     },
     plugins: [
         new webpack.ProvidePlugin({
@@ -15,6 +16,16 @@ module.exports = {
             "window.jQuery": "jquery"
         }),
         new ExtractTextPlugin("styles.css"),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        }),
+        new webpack.DefinePlugin({
+          "process.env": {
+             NODE_ENV: JSON.stringify("production")
+           }
+        })
     ],
     devtool: 'source-map',
     resolve: {
@@ -44,21 +55,21 @@ module.exports = {
             {
                 test: /\.(less)$/,
                 loader: ExtractTextPlugin.extract('style', '!css!less')
-            },            
+            },
             {
                 test: /\.(png)$/,
                 loader: 'url-loader?limit=10000&mimetype=image/png'
-            },            
+            },
             {
                 test: /\.(ico)$/,
                 loader: 'url-loader?limit=10000&mimetype=image/x-icon'
-            },            
+            },
             {
                 test: /\.(svg)$/,
                 loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
             },
             { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]'},
-            { test: /\.(ttf|eot)(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?name=fonts/[name].[ext]'},                        
+            { test: /\.(ttf|eot)(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?name=fonts/[name].[ext]'},
             { test: /\.(mp3)$/, loader: 'file-loader?name=sounds/[name].[ext]'}
         ]
     }

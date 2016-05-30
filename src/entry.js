@@ -16,13 +16,17 @@ function main() {
     const store = createStore(preset, initialState, window.devToolsExtension ? window.devToolsExtension() : undefined);
     const app = document.createElement('div');
     app.className = 'handpan-constructor-wrapper'
-    document.body.appendChild(app);
-    
+    if (document.getElementById('content')){
+      document.getElementById('content').appendChild(app);
+    }
+    else {
+      document.body.appendChild(app);
+    }
     render(
         <Provider store={store}>
           <App/>
         </Provider>,
-      app);    
+      app);
 
 }
 

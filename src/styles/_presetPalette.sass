@@ -100,12 +100,20 @@ ul.dropdown-menu
     border-radius: 4px
     border: 1px solid $color-brown
     background: #c8cbbd
+    .duplicate-hint
+      display: none
+
+    .dd-button-text
+      position: relative
+
     &.duplicate
       background: $color-duplicate
       color: $color-light
       animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) backwards
-      &:before
-        content: 'Ноты не могут повторяться!'
+      .duplicate-hint
+        left: 50%
+        transform: translateX(-50%)
+        display: inline-block
         font-family: 'Open Sans', sans-serif
         font-style: italic
         font-weight: lighter
@@ -113,6 +121,7 @@ ul.dropdown-menu
         color: $color-duplicate
         width: 100px
         margin-top: -120px
+        margin-left: 12px
 
       &:hover
         background: #b96249
