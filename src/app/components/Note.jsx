@@ -1,6 +1,5 @@
 import React from 'react'
 import * as helpers from '../redux/dbhelpers.js'
-.className.replace(/\bMyClass\b/,'');
 const Note = ({number, outerCircle, sound, cx, cy, transformText,transformCircle}) => {
   let inner = (
       <g className={"group-"+ number +"-inner"}
