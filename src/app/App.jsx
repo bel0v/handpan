@@ -40,7 +40,7 @@ export default class App extends React.Component {
     saveCustomPreset(db, currentPreset)(dispatch);
   }
 
-  
+
   onClickProceed = () => {
     this.onClickSave();
     this.writePresetToLocalStorage()
@@ -48,10 +48,10 @@ export default class App extends React.Component {
   }
 
   writePresetToLocalStorage = () => {
-    const {currentPreset, db} = this.props;  
+    const {currentPreset, db} = this.props;
     let soundsArr = currentPreset.sounds.map((s, index) => {
       let sObj = helpers.getSoundByName(db, s);
-      return `${index == 0 ? 'динг' : index}: ${sObj.name}(${sObj.hint})`;
+      return `${index+1}: ${sObj.name}(${sObj.hint})`;
     });
     let sendString = `Пре-set ${currentPreset.name === 'Мой' ? 'свой' : currentPreset.name}. ${soundsArr.join(', ')}`
     localStorage.setItem('panConstructor',sendString);
