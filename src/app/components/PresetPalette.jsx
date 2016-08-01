@@ -41,7 +41,9 @@ export default class PresetPalette extends React.Component {
                         (isActiveDuplicate ? ' duplicate' : '')}
                       key={'gs-'+index}
                       onMouseEnter={(event) => helpers.playSound(gSound.id)}
+                      onTouchStart={(event) => helpers.playSound(gSound.id)}
                       onMouseLeave={(event) => helpers.stopSound(gSound.id)}
+                      onTouchEnd={(event) => helpers.stopSound(gSound.id)}
                       onClick={(event) => {
                         chooseNote(gSound, gIndex + 1)}
                       }>
